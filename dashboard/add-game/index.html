@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+
+    <title>gd-dashboard-add</title>
+    <meta name="description" content="gd"/>
+
+    <meta name="creationdatetime" content="2017-03-15T04:07:57.872Z"/>
+    <meta name="content-language" content="en"/>
+    <meta name="author" content="Orangegames"/>
+
+    <!-- Open graph data -->
+    <meta property="fb:app_id" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="GDistribution.com">
+    <meta property="og:image" content="http://www.gamedistribution.com//assets/logo/logo-mark.svg">
+    <meta property="og:image:width" content="137">
+    <meta property="og:image:height" content="112">
+
+    <!-- Open graph Twitter for games -->
+    <meta name="twitter:card" content=""/>
+    <meta name="twitter:site" content="@"/>
+    <meta name="twitter:creator" content="@"/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content=""/>
+
+    <!-- Open graph for regular pages -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://www.gamedistribution.com//assets/logo/logo-mark.svg">
+
+    <!-- Mobile specific -->
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
+    <link rel="manifest" href="/assets/meta/manifest.json">
+    <link rel="mask-icon" href="/assets/meta/safari-pinned-tab.svg" color="#44a5ab">
+    <link rel="shortcut icon" href="/assets/meta/favicon.ico">
+    <meta name="msapplication-TileColor" content="#44a5ab">
+    <meta name="msapplication-TileImage" content="/assets/meta/mstile-144x144.png">
+    <meta name="msapplication-config" content="/assets/meta/browserconfig.xml">
+    <meta name="theme-color" content="#44a5ab">
+
+    <!-- Fonts & styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500|Squada+One" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.min.css"/>
+
+    <!-- Data structures -->
+    <script type="application/ld+json">
+        [
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "name" : "GDistribution",
+                "url": "http://www.gamedistribution.com/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "http://www.gamedistribution.com/search/?search_str={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name" : "OrangeGames",
+                    "url": "//orangegames.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "http://www.gamedistribution.com//assets/logo/logo-mark.svg",
+                        "width": 137,
+                        "height": 112
+                    }
+                }
+            }
+        ]
+
+
+    </script>
+</head>
+
+<body class="addgamepage" page-type="addgamepage">
+<nav>
+    <div class="wrapper">
+        <input id="toggle-burger" class="toggle-burger" type="checkbox">
+        <label class="burger" for="toggle-burger"></label>
+        <div class="mobile-navigation">
+            <a href="/dashboard/" target="_self" title="All games" >Games</a>
+            <a href="/dashboard/my-games/" target="_self" title="My games" class="active">My
+                games</a>
+            <a href="/dashboard/add-game/" target="_self" title="All games" class="active">Add
+                game</a>
+            <a href="/dashboard/settings/" target="_self" title="All games" >Settings</a>
+            <a href="/dashboard/analytics/" target="_self" title="Analytics" >Analytics</a>
+            <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+            <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+            <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+            <a href="/dashboard/api/" target="_self" title="API" >API</a>
+        </div>
+        <div class="mask"></div>
+        <a href="/dashboard/" target="_self" title="Game Distribution" class="logo">
+            <img src="/assets/logo/logo-mark.svg" alt="logo"/>
+        </a>
+        <a href="/dashboard/settings/" target="_self" title="Settings" class="button user"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <div class="desktop-navigation">
+            <a href="/dashboard/" target="_self" title="Games" class="button">Games</a>
+            <div class="dropdown">
+                <input id="dropdown-games" type="checkbox">
+                <label for="dropdown-games" class="button active">Control panel</label>
+                <div>
+                    <a href="/dashboard/my-games/" target="_self" title="My games" class="active">My
+                        games</a>
+                    <a href="/dashboard/add-game/" target="_self" title="Add game" class="active">Add
+                        game</a>
+                    <a href="/dashboard/settings/" target="_self" title="Settings" >Settings</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input id="dropdown-analytics" type="checkbox">
+                <label for="dropdown-analytics" class="button">Analytics</label>
+                <div>
+                    <a href="/dashboard/analytics/" target="_self" title="Analytics">All</a>
+                    <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+                    <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+                    <a href="/dashboard/analytics/" target="_self" title="Analytics">Something</a>
+                </div>
+            </div>
+            <a href="/dashboard/api/" target="_self" title="API" class="button">API</a>
+            <a href="/dashboard/settings/" target="_self" title="Profile" class="button profile">Hi, A2!</a>
+        </div>
+    </div>
+</nav>
+<section>
+    <div class="wrapper">
+        <article>
+            <header>
+                <small>Share Now</small>
+                <h1>Upload your game</h1>
+            </header>
+            <div class="message warning">
+                <i class="fa fa-warning"></i>
+                <strong>Warning:</strong> Lorem ipsum dolor sit amet, elit. Aenean commodo ligula eget dolor.
+            </div>
+            <div class="message notice">
+                <i class="fa fa-eye"></i>
+                <strong>Notice:</strong> Lorem ipsum dolor sit amet, elit. Aenean commodo ligula eget dolor.
+            </div>
+            <div class="message info">
+                <i class="fa fa-info"></i>
+                <strong>Info:</strong> Lorem ipsum dolor sit amet, elit. Aenean commodo ligula eget dolor.
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <form action="/thanks/" method="post" id="addgame">
+                        <div class="columns">
+                            <div class="big-column">
+                                <label for="title">Title</label>
+                                <input type="text" id="title" name="title" autocomplete="off" placeholder="Title" required="required"/>
+                            </div>
+                            <div class="big-column">
+                                <label for="url">Game URL</label>
+                                <input type="url" id="url" name="url" autocomplete="off" placeholder="Game URL" required="required"/>
+                            </div>
+                            <div class="small-column padding-right">
+                                <label for="type">Type</label>
+                                <select id="type" name="type" required="required">
+                                    <option disabled="disabled" selected="selected" value=""> -- Select an option --
+                                    </option>
+                                    <option value="html5">HTML5</option>
+                                    <option value="flash">Flash</option>
+                                    <option value="unity">Unity</option>
+                                    <option value="webgl">WebGL</option>
+                                </select>
+                            </div>
+                            <div class="small-column">
+                                <label for="desktop">Platform</label>
+                                <label for="desktop" class="reset-label">
+                                    <input type="checkbox" id="desktop" name="desktop" autocomplete="off" checked="checked"/>
+                                    Desktop
+                                </label>
+                                <label for="tablet" class="reset-label">
+                                    <input type="checkbox" id="tablet" name="tablet" autocomplete="off" checked="checked"/>
+                                    Tablet
+                                </label>
+                                <label for="mobile" class="reset-label">
+                                    <input type="checkbox" id="mobile" name="mobile" autocomplete="off" checked="checked"/>
+                                    Mobile
+                                </label>
+                            </div>
+                            <div class="small-column padding-right">
+                                <label for="tags">Tags</label>
+                                <input type="text" id="tags" name="tags" autocomplete="off" placeholder="Some keywords which define the game." required="required"/>
+                            </div>
+                            <div class="small-column">
+                                <label for="advertisements">Advertisements</label>
+                                <select id="advertisements" name="advertisements" required="required">
+                                    <option disabled="disabled" selected="selected" value=""> -- Select an option --
+                                    </option>
+                                    <option value="none">None</option>
+                                    <option value="interstitial">Interstitial ads</option>
+                                    <option value="external">External links</option>
+                                    <option value="pre">Pre-Game ads</option>
+                                </select>
+                            </div>
+                            <div class="small-column padding-right">
+                                <label for="categories">Categories</label>
+                                <select id="categories" name="categories" required="required">
+                                    <option disabled="disabled" selected="selected" value=""> -- Select a category --
+                                    </option>
+                                    <option value="girl">Girl</option>
+                                    <option value="action">Action</option>
+                                    <option value="adventure">Adventure</option>
+                                    <option value="arcade">Arcade</option>
+                                    <option value="casino">Casino</option>
+                                    <option value="classics">Classics</option>
+                                    <option value="desktop">Desktop</option>
+                                    <option value="christmas">Christmas</option>
+                                    <option value="race">Race</option>
+                                </select>
+                            </div>
+                            <div class="small-column dimensions-container">
+                                <label for="width">Dimensions</label>
+                                <input type="number" id="width" name="width" min="320" max="1920" autocomplete="off" placeholder="800" required="required"/>
+                                <i class="fa fa-close"></i>
+                                <input type="number" id="height" name="height" min="320" max="1920" autocomplete="off" placeholder="600" required="required"/>
+                            </div>
+                            <div class="small-column padding-right">
+                                <label for="instructions">Instructions</label>
+                                <textarea id="instructions" name="instructions" placeholder="Instructions (controls)" rows="3"></textarea>
+                            </div>
+                            <div class="small-column">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="description" placeholder="Description" rows="3"></textarea>
+                            </div>
+                            <div class="small-column padding-right">
+                                <label for="author">Author</label>
+                                <input type="text" id="author" name="author" autocomplete="off" placeholder="Author"/>
+                            </div>
+                            <div class="small-column">
+                                <label for="added">Added</label>
+                                <input type="text" id="added" name="added" autocomplete="off" value="04.12.2017" disabled="disabled"/>
+                            </div>
+                            <div class="big-column">
+                                <div class="small-column">
+                                    <button type="submit">update</button>
+                                </div>
+                                <div class="small-column">&nbsp;</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column">
+                    <form action="" method="post">
+                        <fieldset>
+                            <legend>Screenshots</legend>
+                            <div id="box-screenshot" class="dropbox">
+                                <label for="screenshot">
+                                    <i class="fa fa-cloud-upload"></i>
+                                    <div class="list">
+                                        <p>Drop some screenshots!</p>
+                                    </div>
+                                    <input type="file" id="screenshot" multiple accept="image/*"/>
+                                    <button type="submit">Upload</button>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <form action="" method="post">
+                        <fieldset>
+                            <legend>Icons</legend>
+                            <div class="icons">
+                                <img src="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617"
+                                     srcset="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617,
+                                    http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617 2x"
+                                     alt="" width="96" height="96"/>
+                                <img src="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617"
+                                     srcset="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617,
+                                    http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617 2x"
+                                     alt="" width="52" height="52"/>
+                                <img src="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617"
+                                     srcset="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617,
+                                    http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617 2x"
+                                     alt="" width="36" height="36"/>
+                                <img src="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617"
+                                     srcset="http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617,
+                                    http://static.spele.nl/games/assets/tiles/3/94253/89749/300x300-368392.jpg?r=1493216971617 2x"
+                                     alt="" width="72" height="72"/>
+                            </div>
+                            <div id="box-icons" class="dropbox">
+                                <label for="icon">
+                                    <i class="fa fa-cloud-upload"></i>
+                                    <label for="icon" class="list">
+                                        <p>Drop some icons!</p>
+                                    </label>
+                                    <input type="file" id="icon" multiple accept="image/*"/>
+                                    <button type="submit">Upload</button>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<footer>
+    <div class="wrapper">
+        <article>
+            <div class="footer-left">
+                <img src="/assets/logo/logo-purpleorange.svg" alt="GDistribution logo">
+                <p>
+                    Integer ut finibus enim, sit amet imperdiet orci. Fusce nisl libero, consequat vel sodales eget,
+                    aliquam ut nibh. Quisque feugiat in velit sed eleifend. Quisque vulputate leo eu lectus viverra
+                    vehicula. Maecenas aliquam hendrerit aliquet. Duis vitae feugiat ante, et pellentesque nisl.
+                </p>
+            </div>
+            <div class="footer-right">
+                <div class="info">
+                    <small>Information</small>
+                    <a href="/publishers/" target="_blank" title="">Publishers</a>
+                    <a href="/developers/" target="_blank" title="">Developers</a>
+                    <a href="/games/" target="_blank" title="">Games</a>
+                    <a href="#" target="_blank" title="">API</a>
+                    <a href="#" target="_blank" title="">Control Panel</a>
+                </div>
+                <div class="contact">
+                    <small>Contact</small>
+                    <a href="mailto:info@orangegames.com">info@orangegames.com</a>
+                    <p>
+                        Beechavenue 182 <br/>
+                        1119 XP Schiphol-Rijk <br/>
+                        The Netherlands
+                    </p>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#" target="_blank" title="" class="button linkedin"></a>
+                <a href="#" target="_blank" title="" class="button facebook"></a>
+                <a href="#" target="_blank" title="" class="button pintrest"></a>
+                <a href="#" target="_blank" title="" class="button twitter"></a>
+                <a href="#" target="_blank" title="" class="button google"></a>
+            </div>
+            <div class="copyright">
+                <p>OrangeGames Copyright 2017 - <a href="#" target="_blank" title="">Privacy Policy</a> -
+                    <a href="#" target="_blank" title="">Cookies</a></p>
+            </div>
+        </article>
+    </div>
+</footer>
+<script type="text/javascript" src="/scripts/main.min.js"></script>
+</body>
+
+</html>
