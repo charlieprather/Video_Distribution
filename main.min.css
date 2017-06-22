@@ -3355,7 +3355,7 @@ font-family: 'Anton', sans-serif;
     content: "";
     width: 38px;
     height: 38px;
-    background: url('') no-repeat 0 0;
+    background: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498136749/world_kb5yrh.png') no-repeat 0 0;
     background-size: cover
 }
 .list .item .thumb.html5 span:after {
@@ -5188,7 +5188,6 @@ body.developerspage section.api-container header small {
 body.developerspage section.api-container header h2 {
     color: #ff4452;
     font-size: 1.778em;
-    border-top: 1px solid #b3b3b3;
     padding: .278em .556em;
     text-shadow: 0 0 0 transparent
 }
@@ -5382,8 +5381,7 @@ body.publisherspage section.intro-container header small {
 }
 @media (min-width: 1024px) {
     body.publisherspage section.intro-container article {
-        width: 550px
-    }
+padding: 100px;    }
 }
 @media (min-width: 1366px) {
     body.publisherspage section.intro-container article {
