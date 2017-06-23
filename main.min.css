@@ -1194,9 +1194,7 @@ th {
 .fa-chevron-circle-down:before {
     content: "\f13a"
 }
-.fa-html5:before {
-    content: "\f13b"
-}
+
 .fa-css3:before {
     content: "\f13c"
 }
@@ -3250,9 +3248,7 @@ font-family: 'Anton', sans-serif;
 .tiles a.hot:before {
     background: url(http://www.gamedistribution.com/assets/images/catalog-hot.png) no-repeat 0 0
 }
-.tiles a.html5 span:after {
-    background-position: 0 0
-}
+
 .tiles a.flash span:after {
     background-position: -38px 0
 }
@@ -3283,7 +3279,6 @@ font-family: 'Anton', sans-serif;
     content: "";
     width: 38px;
     height: 38px;
-    background: url(http://www.gamedistribution.com/assets/images/sprite-type.png) no-repeat 0 0;
     background-size: cover;
     -ms-transform: scale(0);
     transform: scale(0)
@@ -3358,9 +3353,7 @@ font-family: 'Anton', sans-serif;
     background: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498136749/world_kb5yrh.png') no-repeat 0 0;
     background-size: cover
 }
-.list .item .thumb.html5 span:after {
-    background-position: 0 0
-}
+
 .list .item .thumb.flash span:after {
     background-position: -38px 0
 }
