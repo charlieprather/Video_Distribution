@@ -2875,7 +2875,7 @@ section article button {
 .wrapper {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 70%;
     margin: auto
 }
 
@@ -4394,7 +4394,7 @@ footer .copyright a:active {
 .errorpage footer,
 .homepage footer,
 .publisherspage footer {
-    background: linear-gradient(90deg, black, black);
+    background: linear-gradient(90deg, #46494C, #46494C);
     color: #fff
 }
 .developerspage footer .footer-left img,
@@ -4853,7 +4853,7 @@ body.homepage section.choose-container .column:first-of-type a:active {
 }
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:first-of-type:after {
-        background-image: url('')
+        background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png');
     }
 }
 @media (min-width: 1366px) {
@@ -4892,7 +4892,7 @@ body.homepage section.choose-container .column:last-of-type a:active {
 }
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:last-of-type:after {
-        background-image: url('')
+        background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png')
     }
 }
 @media (min-width: 1366px) {
@@ -4901,7 +4901,7 @@ body.homepage section.choose-container .column:last-of-type a:active {
     }
 }
 body.homepage section.catalog-container {
-background: white;
+background: transparent;
 }
 @media (min-width: 1024px) {
     body.homepage section.catalog-container>div:before {
@@ -4911,8 +4911,8 @@ background: white;
         content: "";
         width: 100%;
         height: 100%;
-        background: url('') no-repeat 100%;
-        background-size: 280px
+            background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png) no-repeat 100%;
+    background-size: 590px;
     }
 }
 @media (min-width: 1366px) {
@@ -4929,7 +4929,7 @@ body.homepage section.catalog-container header small {
 }
 
 body.homepage section.catalog-container a:hover {
-    background: black;;
+    background: black;
     border-bottom-color: black
 }
 body.homepage section.catalog-container a.active,
@@ -4938,7 +4938,7 @@ body.homepage section.catalog-container a:active {
     border-bottom-color: #2980B9
 }
 body.homepage section.customers-container {
-    background-color: #3498DB
+    background-color: #1985A1
 }
 @media (min-width: 1024px) {
     body.homepage section.customers-container>div:before {
@@ -4948,9 +4948,7 @@ body.homepage section.customers-container {
         content: "";
         width: 100%;
         height: 100%;
-        background: url('') no-repeat 100%;
-        background-size: 280px
-    }
+        background: url("") no-repeat 100%; background-size: 590px; }
 }
 @media (min-width: 1366px) {
     body.homepage section.customers-container>div:before {
@@ -4966,7 +4964,7 @@ body.homepage section.customers-container:after {
     height: 0;
     border-top: 1.111em solid transparent;
     border-bottom: 0 solid transparent;
-    border-left: 98vw solid #3498DB
+    border-left: 98vw solid #1985A1
 }
 @media (min-width: 640px) {
     body.homepage section.customers-container:after {
@@ -5074,8 +5072,9 @@ body.developerspage section.intro-container {
         content: "";
         width: 100%;
         height: 100%;
-        background: url('') no-repeat 100%;
-        background-size: 280px
+           background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png) no-repeat 100%;
+    background-size: 340px;
+}
     }
 }
 @media (min-width: 1366px) {
@@ -5118,8 +5117,8 @@ body.developerspage section.catalog-container {
         content: "";
         width: 100%;
         height: 100%;
-        background: url('') no-repeat 100%;
-        background-size: 280px
+           background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png) no-repeat 100%;
+    background-size: 590px;
     }
 }
 @media (min-width: 1366px) {
@@ -5344,8 +5343,7 @@ body.publisherspage section.intro-container {
         content: "";
         width: 100%;
         height: 100%;
-        background: url('') no-repeat 100%;
-        background-size: 280px
+           background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498214007/amorphous-place-holder-image_htnebo.png) no-repeat 100%;
     }
 }
 @media (min-width: 1366px) {
@@ -6325,4 +6323,11 @@ body.settingspage section article header {
 
 .Aligner-item--bottom {
   align-self: flex-end;
+}
+
+body.homepage section.customers-container .customer-bar {
+    display:flex;
+    flex-wrap:wrap;
+    margin:-10px 0 0 -10px;
+    overflow: hidden;
 }
