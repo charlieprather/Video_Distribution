@@ -7,6 +7,16 @@ font-family: 'Poppins', sans-serif;
 body {
     margin: 0
 }
+
+
+
+html,body
+{
+    
+    overflow-x: hidden; 
+}
+
+
 article,
 aside,
 details,
@@ -2798,7 +2808,6 @@ section:before {
     width: 100%;
     height: 100%;
     top: 0;
-    background: url(http://www.gamedistribution.com/assets/images/shape-bg.svg) no-repeat 100% 0;
     background-size: cover;
     opacity: .1
 }
@@ -4033,7 +4042,7 @@ font-family: 'Poppins', sans-serif;
     }
     nav .desktop-navigation .dropdown label:hover,
     nav .desktop-navigation a:hover {
-        background: black;
+        background: #3498DB;
         -color: #2980B9
     }
     nav .desktop-navigation .dropdown label.active,
@@ -4188,11 +4197,30 @@ footer {
 footer article {
     font-size: 16px;
     text-align: center;
-    padding: 2.5em .313em .313em
+    padding: 2.5em .313em
 }
-@media (min-width: 640px) {
-    footer article {
-        padding: 2em 10.563em 1.563em
+
+
+footer article p {
+    padding: .625em
+}
+
+
+@media (min-width:640px) {
+    nav .logo img {
+        content: url(/assets/logo/logo-purpleorange.svg)
+    }
+    .developerspage nav .logo img, .homepage nav .logo img {
+        content: url(/assets/logo/logo-whiteorange.svg)
+    }
+    .errorpage nav .logo img, .loginpage nav .logo img, .publisherspage nav .logo img {
+        content: url(/assets/logo/logo-whitegreen.svg)
+    }
+    footer article p {
+        padding: 0
+    }
+    footer .footer-left img {
+        max-width: 250px
     }
 }
 @media (min-width: 1366px) {
@@ -4411,7 +4439,7 @@ footer .copyright a:active {
 .errorpage footer,
 .homepage footer,
 .publisherspage footer {
-    background: linear-gradient(90deg, #46494C, #46494C);
+    background: black;
     color: #fff
 }
 .developerspage footer .footer-left img,
@@ -4431,7 +4459,8 @@ footer .copyright a:active {
 .errorpage footer .footer-right a,
 .homepage footer .footer-right a,
 .publisherspage footer .footer-right a {
-    color: #fff
+    color: #fff;
+    text-decoration: none;
 }
 .developerspage footer .footer-right .contact a,
 .developerspage footer .footer-right a:active,
@@ -4872,6 +4901,7 @@ body.homepage section.choose-container .column:first-of-type a:active {
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:first-of-type:after {
         background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498828494/Untitled-1_t23xxc.png');
+        opacity: .4;
     }
 }
 @media (min-width: 1366px) {
@@ -4910,7 +4940,9 @@ body.homepage section.choose-container .column:last-of-type a:active {
 }
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:last-of-type:after {
-        background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498829970/Untitled-2_ufuoql.png')
+        background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498829970/Untitled-2_ufuoql.png');
+opacity: .4;
+
     }
 }
 @media (min-width: 1366px) {
@@ -5294,19 +5326,13 @@ body.developerspage section.api-container .column small:first-letter {
     }
 }
 body.developerspage section.api-container .column img {
-    display: block;
-    margin: 1.111em auto 0s
+     display: block;
+    margin: 1.111em auto 0
 }
 body.developerspage section.api-container .column ul {
     margin: 0 auto .556em
 }
-@media (min-width: 1024px) {
-    body.developerspage section.api-container .column:first-child h3 {
-        font-size: 1.6em;
-        padding-top: .7em;
-        padding-bottom: .7em
-    }
-}
+
 @media (min-width: 1366px) {
     body.developerspage section.api-container .column:first-child h3 {
         padding-top: .278em;
@@ -5316,9 +5342,7 @@ body.developerspage section.api-container .column ul {
 }
 @media (min-width: 1024px) {
     body.developerspage section.api-container .column:nth-child(2) h3 {
-        font-size: 1.6em;
-        padding-top: .7em;
-        padding-bottom: .7em
+    
     }
 }
 @media (min-width: 1366px) {
@@ -5360,8 +5384,18 @@ body.publisherspage section.intro-container {
         content: "";
         width: 100%;
         height: 100%;
-           background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498833572/Untitled-3_mikzkd.png) no-repeat 100%;
-    }
+    background: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498833572/Untitled-3_mikzkd.png) no-repeat 100%;
+    background-image: url(http://res.cloudinary.com/dqle7rqpy/image/upload/v1498833572/Untitled-3_mikzkd.png);
+    background-position-x: 80%;
+    background-position-y: left;
+    background-size: 50%;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    opacity: .4;
+    background-origin: initial;
+    background-clip: initial;
+     }
 }
 @media (min-width: 1366px) {
     body.publisherspage section.intro-container>div:before {
@@ -6346,4 +6380,8 @@ body.homepage section.customers-container .customer-bar {
     flex-wrap:wrap;
     margin:-10px 0 0 -10px;
     overflow: hidden;
+}
+
+.col-8{
+width: 12.5%;
 }
