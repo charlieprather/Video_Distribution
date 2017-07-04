@@ -6388,3 +6388,70 @@ body.homepage section.customers-container .customer-bar {
 .col-8{
 width: 12.5%;
 }
+
+
+*{box-sizing: border-box;}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body{
+background-color:#000033;
+}
+
+.row{
+width:1000px;
+border:solid 3px transparent;
+background-color:transparent;
+margin: 0 auto;
+border-top:0px;
+border-bottom:0px;
+}
+
+.top-row{
+border-top:solid 3px transparent;
+}
+
+.bottom-row{
+border-bottom:solid 3px transparent;
+}
+
+.hp-col{
+float:left;
+width:33.33%;
+background-color:red;
+color: transparent;
+border:solid 3px transparent;
+padding:1em;
+min-height: 220px;
+}
+
+.hp-col-1{
+float:left;
+width:25%;
+border:solid 3px transparent;
+padding:0px;
+}
+
+
+
+@media screen and (max-width:1020px) { 
+  .row{
+  width:98%;
+  }
+}
+
+@media screen and (max-width:600px) { 
+  .hp-col, .hp-col-2, .hp-col-1{
+  float:none;
+  width:100%;
+  }
+  .hp-col-1{
+  text-align:center;
+  }
+  .hp-col-1 img{
+  margin:0 auto;
+  }
+}
