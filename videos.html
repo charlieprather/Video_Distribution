@@ -1,0 +1,2891 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Games</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Games" />
+    <meta name="image" />
+    <meta name="keywords" content="Games" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Game Distribution">
+    <meta name="msvalidate.01" content="64828BEEBC2810C55BDC8D557EF12230" />
+    <meta name="baidu_union_verify" content="f06fce1e3726da85348ac7eda579b75f">
+
+    <meta property="og:url" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Games" />
+    <meta property="og:description" />
+    <meta property="og:image" />
+
+    <!-- Mobile specific -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
+    <link rel="manifest" href="/assets/meta/manifest.json">
+    <link rel="mask-icon" href="/assets/meta/safari-pinned-tab.svg" color="#44a5ab">
+    <link rel="shortcut icon" href="/assets/meta/favicon.ico">
+    <meta name="msapplication-TileColor" content="#44a5ab">
+    <meta name="msapplication-TileImage" content="/assets/meta/mstile-144x144.png">
+    <meta name="msapplication-config" content="/assets/meta/browserconfig.xml">
+    <meta name="theme-color" content="#44a5ab">
+    <!-- Fonts & styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500|Squada+One" rel="stylesheet">
+    <link rel="stylesheet" href="main.min.css" />
+    <!-- Data structures -->
+    
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <!--Jquery CSS-->
+    <link href="popup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dropzone.css" />
+
+    <script>
+        $(document).ready(function () {
+            $('.desktop-navigation .button').click(function () {
+                $('.desktop-navigation .button').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .not-active {
+            pointer-events: none;
+            cursor: default;
+            background-color: gray;
+            border-bottom-color: black;
+        }
+    </style>
+</head>
+<body class="gamespage" page-type="gamespage">
+    <nav>
+        <div class="wrapper">
+            <input id="toggle-burger" class="toggle-burger" type="checkbox">
+            <label class="burger" for="toggle-burger"></label>
+            <div class="mobile-navigation">
+                        <a href="/publishers/" target="_self" title="Publishers">Publishers</a>
+                        <a href="/developers/" target="_self" title="Developers">Developers</a>
+                        <a href="/games/" target="_self" title="Games">Games</a>
+                        <a href="/api/" target="_self" title="Api">Api</a>
+                        <a href="/login/" target="_self" title="Login">Login</a>
+                        <a href="/joinus/" target="_self" title="Join us">Join us</a>
+
+            </div>
+            <div class="mask"></div>
+            <a href="/" target="_self" title="Game Distribution" class="logo">
+                <img src="/assets/logo/logo-mark.svg" alt="logo" />
+            </a>
+            <a href="/login/" target="_self" title="Login to dashboard" class="button user"><i class="fa fa-user" aria-hidden="true"></i></a>
+            <div class="desktop-navigation">
+                        <a href="/publishers/" target="_self" title="Publishers" class="button">Publishers</a>
+                        <a href="/developers/" target="_self" title="Developers" class="button">Developers</a>
+                        <a href="/games/" target="_self" title="Games" class="button active">Games</a>
+                        <a href="/api/" target="_self" title="Api" class="button">Api</a>
+                         <a href="/login/" target="_self" title="Login" class="button">Login</a>
+                            <a href="/joinus/" target="_self" title="Join us" class="button">Join us</a>
+                        
+
+            </div>
+
+            
+
+        </div>
+    </nav>
+    
+<style>
+    .select {
+        /*height: 1180px;*/
+        overflow-y: hidden !important;
+    }
+
+    .menuTitle {
+        width: 61%;
+        display: flex;
+        text-align: left;
+    }
+
+        .menuTitle .ft, .menuTitle .st {
+            float: left;
+        }
+
+        .menuTitle .ft {
+            width: 150px;
+            font-size: x-large;
+        }
+
+        .menuTitle .st {
+            width: 50%;
+            font-size: x-large;
+        }
+
+    #searchresults {
+        position: absolute;
+        top: 40px;
+        background: #d0d0d0;
+        z-index: 10;
+        right: 0px;
+    }
+
+    a.searchList {
+        color: #512e85;
+        text-decoration: none;
+        display: flex;
+        margin: 15px;
+    }
+
+        a.searchList:hover {
+            background: #e0e0e0;
+        }
+
+        a.searchList img {
+            float: left;
+            display: flex;
+            margin-right: 5px;
+            border: solid 2px #eceaea;
+        }
+
+        a.searchList span {
+            float: left;
+            display: flex;
+            white-space: nowrap;
+        }
+
+    .search-field.company {
+        display: block !important;
+        background: #999999;
+    }
+
+        .search-field.company i.fa {
+            font-size: 22px;
+        }
+
+        .search-field.company input {
+            position: relative !important;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+        }
+
+    .tiles {
+        justify-content: flex-start;
+    }
+
+
+        /*.catalog-container .tiles a*/
+        .tiles a {
+            min-width: 170px;
+            flex-grow: 1;
+            max-width: 200px;
+            width: 25%;
+        }
+</style>
+
+
+    <section>
+
+        <div class="wrapper">
+            <article>
+                <header>
+                    <h1>Recommended for you</h1>
+                </header>
+                <div class="tiles single-row">
+                            <a href="/games/1-Player/Greedy-Gods.html"
+                               target="_self"
+                                 title="Greedy Gods"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/ac4c43303af64798906543bace0bba63.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Greedy Gods</p>
+
+                            </a>
+                            <a href="/games/Action/Dynamons-World.html"
+                               target="_self"
+                                 title="Dynamons World"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/14d10c2b37794aafad858a6e90120e23.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Dynamons World</p>
+
+                            </a>
+                            <a href="/games/Puzzle/3-Pandas-HTML5.html"
+                               target="_self"
+                                 title="3 Pandas HTML5"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/e0def4be85be486cb4c8b576b7c969fa.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">3 Pandas HTML5</p>
+
+                            </a>
+                            <a href="/games/Dress-Up/Princess-Pet-Studio.html"
+                               target="_self"
+                                 title="Princess Pet Studio"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/98f0d5f93731b7f3186531c37cca0945.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Princess Pet Studio</p>
+
+                            </a>
+                            <a href="/games/Management/Tube-Clicker.html"
+                               target="_self"
+                                 title="Tube Clicker"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/d9ef28d7e6a9493da73860d1e0b70414.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Tube Clicker</p>
+
+                            </a>
+                            <a href="/games/Simulation/Fidget-Spinner-Master.html"
+                               target="_self"
+                                 title="Fidget Spinner Master"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/32083fe800854925aca8d4aeea2013f9.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Fidget Spinner Master</p>
+
+                            </a>
+                            <a href="/games/Action/Cave-Golf.html"
+                               target="_self"
+                                 title="Cave Golf"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/6a1005ef145c4366a26fd2058c375e7b.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Cave Golf</p>
+
+                            </a>
+                            <a href="/games/Bubble-Shooter/Bubble-Burst.html"
+                               target="_self"
+                                 title="Bubble Burst"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/405c00612981466cbc5d9dcef4214811.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Bubble Burst</p>
+
+                            </a>
+                            <a href="/games/Action/Silly-Ways-To-Die.html"
+                               target="_self"
+                                 title="Silly Ways To Die"                                                           class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/b92a4170784248bca2ffa0c08bec7a50.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Silly Ways To Die</p>
+
+                            </a>
+                </div>
+                <div class="tiles single-row">
+                            <a href="/games/Action/Snail-Bob-4-html5.html"
+                               target="_self"
+                                 title="Snail Bob 4 html5"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/1b6b1812ae8149e987d4d9c7f2855131.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Snail Bob 4 html5</p>
+
+                            </a>
+                            <a href="/games/Skill/Endless-Lake.html"
+                               target="_self"
+                                 title="Endless Lake"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/fad19223bb6d4f0e83062dc3abc3e39f.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Endless Lake</p>
+
+                            </a>
+                            <a href="/games/Skill/My-Dolphin-Show-7.html"
+                               target="_self"
+                                 title="My Dolphin Show 7"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/c0fca7ba3ffe4139afdb9f5ee8bbd584.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">My Dolphin Show 7</p>
+
+                            </a>
+                            <a href="/games/Girls/Ladybug-Baby-Shower-Care.html"
+                               target="_self"
+                                 title="Ladybug Baby Shower Care"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/0220c408d184421f837893e77d65e1ff.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Ladybug Baby Shower Care</p>
+
+                            </a>
+                            <a href="/games/Puzzle/Jelly-Escape.html"
+                               target="_self"
+                                 title="Jelly Escape"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/e7c62af6afd045f59d7aed84bbb8cd49.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Jelly Escape</p>
+
+                            </a>
+                            <a href="/games/Puzzle/Vex-3-(HTML5).html"
+                               target="_self"
+                                 title="Vex 3 (HTML5)"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/762c932b4db74c6da0c1d101b2da8be6.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Vex 3 (HTML5)</p>
+
+                            </a>
+                            <a href="/games/Bubble-Shooter/FGP-Bubbleshooter.html"
+                               target="_self"
+                                 title="FGP Bubbleshooter"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/127c290309bb4b7096dab06c711ad58e.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">FGP Bubbleshooter</p>
+
+                            </a>
+                            <a href="/games/Puzzle/Super-Stack.html"
+                               target="_self"
+                                 title="Super Stack"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/d3cd7323dc38417c90e37f0ec4c3f548.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Super Stack</p>
+
+                            </a>
+                            <a href="/games/Puzzle/Jewel-Burst.html"
+                               target="_self"
+                                 title="Jewel Burst"                                                            class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.GameDistribution.com/49258a0e497c42b5b5d87887f24d27a6.jpg"
+                                         style="min-width:100%; width: auto; min-height: 100%; height:auto;max-height:150px;" />
+
+                                </span>
+
+                                <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Jewel Burst</p>
+
+                            </a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section>
+        <div class="wrapper">
+            <article>
+                <header>
+                    <h2>New & updated games</h2>
+                </header>
+                <div class="tiles single-row">
+                        <a href="/games/Dress-Up/Princess-Best-Date-Ever.html"
+                           target="_self"
+                             title="Princess Best Date Ever"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/f919360a54af4614bd82dca1d4a2fc1e.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Princess Best Date Ever</p>
+
+                        </a>
+                        <a href="/games/Dress-Up/Sery-Fashion-Cover-Dress-Up.html"
+                           target="_self"
+                             title="Sery Fashion Cover Dress Up"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/95cae4a5df6f4be19e513ca374377be9.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Sery Fashion Cover Dress Up</p>
+
+                        </a>
+                        <a href="/games/Dress-Up/Princesses-Thrift-Shop-Challenge.html"
+                           target="_self"
+                             title="Princesses Thrift Shop Challenge"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/818a0a8aad884d02bb9f9211aabda5fb.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Princesses Thrift Shop Challenge</p>
+
+                        </a>
+                        <a href="/games/Girls/Kitty-Care-and-Grooming.html"
+                           target="_self"
+                             title="Kitty Care and Grooming"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/10f59543d2234427945e03507f2f02ac.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Kitty Care and Grooming</p>
+
+                        </a>
+                        <a href="/games/Girls/Fat-to-Fit-Princess-Fitness.html"
+                           target="_self"
+                             title="Fat to Fit Princess Fitness"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/d7a64a6138ae46d6808a39b7543ab4ce.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Fat to Fit Princess Fitness</p>
+
+                        </a>
+                        <a href="/games/Dress-Up/Rosanna-Pansino-Dressup.html"
+                           target="_self"
+                             title="Rosanna Pansino Dressup"                                                    class="update flash">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/1225645b66754e199dc086f73e68cdc7.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Rosanna Pansino Dressup</p>
+
+                        </a>
+                        <a href="/games/Dress-Up/Rosanna-Pansino-Dress-Up.html"
+                           target="_self"
+                             title="Rosanna Pansino Dress Up"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/1255e56c6397480880b118ba25144eef.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Rosanna Pansino Dress Up</p>
+
+                        </a>
+                        <a href="/games/Dress-Up/Wedding-Shopping-with-Bridesmaids.html"
+                           target="_self"
+                             title="Wedding Shopping with Bridesmaids"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/d06005d465954d53807166a3f5facae2.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">Wedding Shopping with Bridesmaids</p>
+
+                        </a>
+                        <a href="/games/Puzzle/3-Pandas-HTML5.html"
+                           target="_self"
+                             title="3 Pandas HTML5"                                                    class="update html5">
+                            <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                <img src="http://img.gamedistribution.com/e0def4be85be486cb4c8b576b7c969fa.jpg"
+                                     style="min-width:100%; min-height: 100%; height:auto; max-height:150px;" />
+                            </span>
+
+                            <p style="width:150px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis">3 Pandas HTML5</p>
+
+                        </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<section class="catalog-container">
+    <div class="wrapper">
+        <article>
+            <header>
+                <div class="filters-container">
+                    <div class="checkbox">
+                        <input id="checkbox-html5" type="checkbox" class="checkedType" name="gameType" value="html5">
+                        <label for="checkbox-html5">HTML5</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="checkbox-flash" type="checkbox" class="checkedType" name="gameType" value="flash">
+                        <label for="checkbox-flash">Flash</label>
+                    </div>
+                    <div class="search-field">
+                        <input type="search" name="id" id="searchBox" placeholder="Search..." autocomplete="off" />
+                        <i id="search-button" class="fa fa-search"></i>
+                        <div id="suggestions"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="columns">
+                <div class="column" style="max-width:290px">
+                    <div class="menu">
+                        <h2>All games</h2>
+                        <a id="btnRssBuilder" title="RSS" style="cursor:pointer">
+                            RSS
+                            <i class="fa fa-rss"></i>
+                        </a>
+                        <a href="/Games" target="_self" title="">All games A - Z</a>
+                        <div class="dropdown">
+                            <input id="dropdown-companies" type="checkbox" >
+                            <label for="dropdown-companies">Companies</label>
+                            <div class="select">
+                                <div class="search-field company">
+                                    <input type="search" name="id" id="searchCompanyBox" autocomplete="off" placeholder="Search..." />
+                                    <i id="search-company-button" class="fa fa-search"></i>
+                                </div>
+                                <div id="dvCompanyPlace">
+                                        <a href="/Gamelist/African-Games"
+                                           id="African-Games-(2)"
+                                           target="_self"
+                                                                                      title="African Games (2)"
+                                           style="white-space:nowrap;">
+                                            African Games (2)
+                                        </a>
+                                        <a href="/Gamelist/ajazgames"
+                                           id="ajazgames-(32)"
+                                           target="_self"
+                                                                                      title="ajazgames (32)"
+                                           style="white-space:nowrap;">
+                                            ajazgames (32)
+                                        </a>
+                                        <a href="/Gamelist/AlanWebInvestments"
+                                           id="AlanWebInvestments-(4)"
+                                           target="_self"
+                                                                                      title="AlanWebInvestments (4)"
+                                           style="white-space:nowrap;">
+                                            AlanWebInvestments (4)
+                                        </a>
+                                        <a href="/Gamelist/BestEscapeGames-"
+                                           id="BestEscapeGames--(209)"
+                                           target="_self"
+                                                                                      title="BestEscapeGames  (209)"
+                                           style="white-space:nowrap;">
+                                            BestEscapeGames  (209)
+                                        </a>
+                                        <a href="/Gamelist/bestphysics"
+                                           id="bestphysics-(5)"
+                                           target="_self"
+                                                                                      title="bestphysics (5)"
+                                           style="white-space:nowrap;">
+                                            bestphysics (5)
+                                        </a>
+                                        <a href="/Gamelist/Billie&#39;s-Illustrations"
+                                           id="Billie&#39;s-Illustrations-(4)"
+                                           target="_self"
+                                                                                      title="Billie&#39;s Illustrations (4)"
+                                           style="white-space:nowrap;">
+                                            Billie&#39;s Illustrations (4)
+                                        </a>
+                                        <a href="/Gamelist/Bitent-Media"
+                                           id="Bitent-Media-(38)"
+                                           target="_self"
+                                                                                      title="Bitent Media (38)"
+                                           style="white-space:nowrap;">
+                                            Bitent Media (38)
+                                        </a>
+                                        <a href="/Gamelist/Box10.com"
+                                           id="Box10.com-(7)"
+                                           target="_self"
+                                                                                      title="Box10.com (7)"
+                                           style="white-space:nowrap;">
+                                            Box10.com (7)
+                                        </a>
+                                        <a href="/Gamelist/Brutal-Inc"
+                                           id="Brutal-Inc-(2)"
+                                           target="_self"
+                                                                                      title="Brutal Inc (2)"
+                                           style="white-space:nowrap;">
+                                            Brutal Inc (2)
+                                        </a>
+                                        <a href="/Gamelist/Chilican"
+                                           id="Chilican-(54)"
+                                           target="_self"
+                                                                                      title="Chilican (54)"
+                                           style="white-space:nowrap;">
+                                            Chilican (54)
+                                        </a>
+                                        <a href="/Gamelist/Creative-Games"
+                                           id="Creative-Games-(5)"
+                                           target="_self"
+                                                                                      title="Creative Games (5)"
+                                           style="white-space:nowrap;">
+                                            Creative Games (5)
+                                        </a>
+                                        <a href="/Gamelist/Daria-Games"
+                                           id="Daria-Games-(19)"
+                                           target="_self"
+                                                                                      title="Daria Games (19)"
+                                           style="white-space:nowrap;">
+                                            Daria Games (19)
+                                        </a>
+                                        <a href="/Gamelist/DariaGames.com"
+                                           id="DariaGames.com-(54)"
+                                           target="_self"
+                                                                                      title="DariaGames.com (54)"
+                                           style="white-space:nowrap;">
+                                            DariaGames.com (54)
+                                        </a>
+                                        <a href="/Gamelist/Dav"
+                                           id="Dav-(1)"
+                                           target="_self"
+                                                                                      title="Dav (1)"
+                                           style="white-space:nowrap;">
+                                            Dav (1)
+                                        </a>
+                                        <a href="/Gamelist/Doll-Divine"
+                                           id="Doll-Divine-(2)"
+                                           target="_self"
+                                                                                      title="Doll Divine (2)"
+                                           style="white-space:nowrap;">
+                                            Doll Divine (2)
+                                        </a>
+                                        <a href="/Gamelist/Dominick-Bruno-Web_Advertising"
+                                           id="Dominick-Bruno-Web/Advertising-(53)"
+                                           target="_self"
+                                                                                      title="Dominick Bruno Web/Advertising (53)"
+                                           style="white-space:nowrap;">
+                                            Dominick Bruno Web/Advertising (53)
+                                        </a>
+                                        <a href="/Gamelist/DressUpWho"
+                                           id="DressUpWho-(76)"
+                                           target="_self"
+                                                                                      title="DressUpWho (76)"
+                                           style="white-space:nowrap;">
+                                            DressUpWho (76)
+                                        </a>
+                                        <a href="/Gamelist/Empire-Games-SRL"
+                                           id="Empire-Games-SRL-(51)"
+                                           target="_self"
+                                                                                      title="Empire Games SRL (51)"
+                                           style="white-space:nowrap;">
+                                            Empire Games SRL (51)
+                                        </a>
+                                        <a href="/Gamelist/EnaGames"
+                                           id="EnaGames-(8)"
+                                           target="_self"
+                                                                                      title="EnaGames (8)"
+                                           style="white-space:nowrap;">
+                                            EnaGames (8)
+                                        </a>
+                                        <a href="/Gamelist/Enjoydressup"
+                                           id="Enjoydressup-(233)"
+                                           target="_self"
+                                                                                      title="Enjoydressup (233)"
+                                           style="white-space:nowrap;">
+                                            Enjoydressup (233)
+                                        </a>
+                                        <a href="/Gamelist/Famobi-GmbH"
+                                           id="Famobi-GmbH-(7)"
+                                           target="_self"
+                                                                                      title="Famobi GmbH (7)"
+                                           style="white-space:nowrap;">
+                                            Famobi GmbH (7)
+                                        </a>
+                                        <a href="/Gamelist/Flashgames"
+                                           id="Flashgames-(1)"
+                                           target="_self"
+                                                                                      title="Flashgames (1)"
+                                           style="white-space:nowrap;">
+                                            Flashgames (1)
+                                        </a>
+                                        <a href="/Gamelist/Funmoth-Games"
+                                           id="Funmoth-Games-(3)"
+                                           target="_self"
+                                                                                      title="Funmoth Games (3)"
+                                           style="white-space:nowrap;">
+                                            Funmoth Games (3)
+                                        </a>
+                                        <a href="/Gamelist/Funtomic"
+                                           id="Funtomic-(2)"
+                                           target="_self"
+                                                                                      title="Funtomic (2)"
+                                           style="white-space:nowrap;">
+                                            Funtomic (2)
+                                        </a>
+                                        <a href="/Gamelist/G.Indi"
+                                           id="G.Indi-(2)"
+                                           target="_self"
+                                                                                      title="G.Indi (2)"
+                                           style="white-space:nowrap;">
+                                            G.Indi (2)
+                                        </a>
+                                        <a href="/Gamelist/Gaan-Media"
+                                           id="Gaan-Media-(1)"
+                                           target="_self"
+                                                                                      title="Gaan Media (1)"
+                                           style="white-space:nowrap;">
+                                            Gaan Media (1)
+                                        </a>
+                                        <a href="/Gamelist/Game-Distribution"
+                                           id="Game-Distribution-(3)"
+                                           target="_self"
+                                                                                      title="Game Distribution (3)"
+                                           style="white-space:nowrap;">
+                                            Game Distribution (3)
+                                        </a>
+                                        <a href="/Gamelist/Gamerbizindia"
+                                           id="Gamerbizindia-(1)"
+                                           target="_self"
+                                                                                      title="Gamerbizindia (1)"
+                                           style="white-space:nowrap;">
+                                            Gamerbizindia (1)
+                                        </a>
+                                        <a href="/Gamelist/Games-Banner-Net-Inc"
+                                           id="Games-Banner-Net-Inc-(13)"
+                                           target="_self"
+                                                                                      title="Games Banner Net Inc (13)"
+                                           style="white-space:nowrap;">
+                                            Games Banner Net Inc (13)
+                                        </a>
+                                        <a href="/Gamelist/Games-Banner-Network"
+                                           id="Games-Banner-Network-(56)"
+                                           target="_self"
+                                                                                      title="Games Banner Network (56)"
+                                           style="white-space:nowrap;">
+                                            Games Banner Network (56)
+                                        </a>
+                                        <a href="/Gamelist/Gamesape.com"
+                                           id="Gamesape.com-(1)"
+                                           target="_self"
+                                                                                      title="Gamesape.com (1)"
+                                           style="white-space:nowrap;">
+                                            Gamesape.com (1)
+                                        </a>
+                                        <a href="/Gamelist/Girlgames4u.com"
+                                           id="Girlgames4u.com-(1)"
+                                           target="_self"
+                                                                                      title="Girlgames4u.com (1)"
+                                           style="white-space:nowrap;">
+                                            Girlgames4u.com (1)
+                                        </a>
+                                        <a href="/Gamelist/GloomeGames"
+                                           id="GloomeGames-(1)"
+                                           target="_self"
+                                                                                      title="GloomeGames (1)"
+                                           style="white-space:nowrap;">
+                                            GloomeGames (1)
+                                        </a>
+                                        <a href="/Gamelist/GlossyPlay"
+                                           id="GlossyPlay-(60)"
+                                           target="_self"
+                                                                                      title="GlossyPlay (60)"
+                                           style="white-space:nowrap;">
+                                            GlossyPlay (60)
+                                        </a>
+                                        <a href="/Gamelist/GRYDLADZIECI-24.PL"
+                                           id="GRYDLADZIECI-24.PL-(8)"
+                                           target="_self"
+                                                                                      title="GRYDLADZIECI-24.PL (8)"
+                                           style="white-space:nowrap;">
+                                            GRYDLADZIECI-24.PL (8)
+                                        </a>
+                                        <a href="/Gamelist/Idea"
+                                           id="Idea-(6)"
+                                           target="_self"
+                                                                                      title="Idea (6)"
+                                           style="white-space:nowrap;">
+                                            Idea (6)
+                                        </a>
+                                        <a href="/Gamelist/Idea-Studios"
+                                           id="Idea-Studios-(93)"
+                                           target="_self"
+                                                                                      title="Idea Studios (93)"
+                                           style="white-space:nowrap;">
+                                            Idea Studios (93)
+                                        </a>
+                                        <a href="/Gamelist/IdeaStudios"
+                                           id="IdeaStudios-(121)"
+                                           target="_self"
+                                                                                      title="IdeaStudios (121)"
+                                           style="white-space:nowrap;">
+                                            IdeaStudios (121)
+                                        </a>
+                                        <a href="/Gamelist/igirlgames"
+                                           id="igirlgames-(5)"
+                                           target="_self"
+                                                                                      title="igirlgames (5)"
+                                           style="white-space:nowrap;">
+                                            igirlgames (5)
+                                        </a>
+                                        <a href="/Gamelist/Inlogic-Software"
+                                           id="Inlogic-Software-(1)"
+                                           target="_self"
+                                                                                      title="Inlogic Software (1)"
+                                           style="white-space:nowrap;">
+                                            Inlogic Software (1)
+                                        </a>
+                                        <a href="/Gamelist/jeuxcom"
+                                           id="jeuxcom-(1)"
+                                           target="_self"
+                                                                                      title="jeuxcom (1)"
+                                           style="white-space:nowrap;">
+                                            jeuxcom (1)
+                                        </a>
+                                        <a href="/Gamelist/Kaiser-Games-GmbH"
+                                           id="Kaiser-Games-GmbH-(29)"
+                                           target="_self"
+                                                                                      title="Kaiser Games GmbH (29)"
+                                           style="white-space:nowrap;">
+                                            Kaiser Games GmbH (29)
+                                        </a>
+                                        <a href="/Gamelist/Kawaii-Games"
+                                           id="Kawaii-Games-(15)"
+                                           target="_self"
+                                                                                      title="Kawaii Games (15)"
+                                           style="white-space:nowrap;">
+                                            Kawaii Games (15)
+                                        </a>
+                                        <a href="/Gamelist/KeyGames.com"
+                                           id="KeyGames.com-(1)"
+                                           target="_self"
+                                                                                      title="KeyGames.com (1)"
+                                           style="white-space:nowrap;">
+                                            KeyGames.com (1)
+                                        </a>
+                                        <a href="/Gamelist/Longames-TEC-Co.%2cLtd"
+                                           id="Longames-TEC-Co.,Ltd-(1)"
+                                           target="_self"
+                                                                                      title="Longames TEC Co.,Ltd (1)"
+                                           style="white-space:nowrap;">
+                                            Longames TEC Co.,Ltd (1)
+                                        </a>
+                                        <a href="/Gamelist/MB2"
+                                           id="MB2-(9)"
+                                           target="_self"
+                                                                                      title="MB2 (9)"
+                                           style="white-space:nowrap;">
+                                            MB2 (9)
+                                        </a>
+                                        <a href="/Gamelist/Mirchi-Games"
+                                           id="Mirchi-Games-(2)"
+                                           target="_self"
+                                                                                      title="Mirchi Games (2)"
+                                           style="white-space:nowrap;">
+                                            Mirchi Games (2)
+                                        </a>
+                                        <a href="/Gamelist/MyCuteGames"
+                                           id="MyCuteGames-(36)"
+                                           target="_self"
+                                                                                      title="MyCuteGames (36)"
+                                           style="white-space:nowrap;">
+                                            MyCuteGames (36)
+                                        </a>
+                                        <a href="/Gamelist/Next-Vision-Solutions"
+                                           id="Next-Vision-Solutions-(9)"
+                                           target="_self"
+                                                                                      title="Next Vision Solutions (9)"
+                                           style="white-space:nowrap;">
+                                            Next Vision Solutions (9)
+                                        </a>
+                                        <a href="/Gamelist/noesgames"
+                                           id="noesgames-(1)"
+                                           target="_self"
+                                                                                      title="noesgames (1)"
+                                           style="white-space:nowrap;">
+                                            noesgames (1)
+                                        </a>
+                                        <a href="/Gamelist/Nowgamez.com"
+                                           id="Nowgamez.com-(1)"
+                                           target="_self"
+                                                                                      title="Nowgamez.com (1)"
+                                           style="white-space:nowrap;">
+                                            Nowgamez.com (1)
+                                        </a>
+                                        <a href="/Gamelist/NSR-Games"
+                                           id="NSR-Games-(19)"
+                                           target="_self"
+                                                                                      title="NSR Games (19)"
+                                           style="white-space:nowrap;">
+                                            NSR Games (19)
+                                        </a>
+                                        <a href="/Gamelist/OK-Interactive"
+                                           id="OK-Interactive-(1)"
+                                           target="_self"
+                                                                                      title="OK Interactive (1)"
+                                           style="white-space:nowrap;">
+                                            OK Interactive (1)
+                                        </a>
+                                        <a href="/Gamelist/OrangeGames"
+                                           id="OrangeGames-(109)"
+                                           target="_self"
+                                                                                      title="OrangeGames (109)"
+                                           style="white-space:nowrap;">
+                                            OrangeGames (109)
+                                        </a>
+                                        <a href="/Gamelist/Oscar-Intermed"
+                                           id="Oscar-Intermed-(245)"
+                                           target="_self"
+                                                                                      title="Oscar Intermed (245)"
+                                           style="white-space:nowrap;">
+                                            Oscar Intermed (245)
+                                        </a>
+                                        <a href="/Gamelist/Pinkygirlgames"
+                                           id="Pinkygirlgames-(16)"
+                                           target="_self"
+                                                                                      title="Pinkygirlgames (16)"
+                                           style="white-space:nowrap;">
+                                            Pinkygirlgames (16)
+                                        </a>
+                                        <a href="/Gamelist/Play-Belle-Games"
+                                           id="Play-Belle-Games-(48)"
+                                           target="_self"
+                                                                                      title="Play Belle Games (48)"
+                                           style="white-space:nowrap;">
+                                            Play Belle Games (48)
+                                        </a>
+                                        <a href="/Gamelist/Play-Match-3-Games"
+                                           id="Play-Match-3-Games-(1)"
+                                           target="_self"
+                                                                                      title="Play Match 3 Games (1)"
+                                           style="white-space:nowrap;">
+                                            Play Match 3 Games (1)
+                                        </a>
+                                        <a href="/Gamelist/PlayPink.com"
+                                           id="PlayPink.com-(88)"
+                                           target="_self"
+                                                                                      title="PlayPink.com (88)"
+                                           style="white-space:nowrap;">
+                                            PlayPink.com (88)
+                                        </a>
+                                        <a href="/Gamelist/Purplesoft"
+                                           id="Purplesoft-(1)"
+                                           target="_self"
+                                                                                      title="Purplesoft (1)"
+                                           style="white-space:nowrap;">
+                                            Purplesoft (1)
+                                        </a>
+                                        <a href="/Gamelist/QkyGames"
+                                           id="QkyGames-(34)"
+                                           target="_self"
+                                                                                      title="QkyGames (34)"
+                                           style="white-space:nowrap;">
+                                            QkyGames (34)
+                                        </a>
+                                        <a href="/Gamelist/Racz-Ioan-Paul-II"
+                                           id="Racz-Ioan-Paul-II-(261)"
+                                           target="_self"
+                                                                                      title="Racz Ioan Paul II (261)"
+                                           style="white-space:nowrap;">
+                                            Racz Ioan Paul II (261)
+                                        </a>
+                                        <a href="/Gamelist/RavalMatic"
+                                           id="RavalMatic-(2)"
+                                           target="_self"
+                                                                                      title="RavalMatic (2)"
+                                           style="white-space:nowrap;">
+                                            RavalMatic (2)
+                                        </a>
+                                        <a href="/Gamelist/Rinmaru-Games"
+                                           id="Rinmaru-Games-(53)"
+                                           target="_self"
+                                                                                      title="Rinmaru Games (53)"
+                                           style="white-space:nowrap;">
+                                            Rinmaru Games (53)
+                                        </a>
+                                        <a href="/Gamelist/Signal-Game-Studio"
+                                           id="Signal-Game-Studio-(2)"
+                                           target="_self"
+                                                                                      title="Signal Game Studio (2)"
+                                           style="white-space:nowrap;">
+                                            Signal Game Studio (2)
+                                        </a>
+                                        <a href="/Gamelist/SisiGames"
+                                           id="SisiGames-(168)"
+                                           target="_self"
+                                                                                      title="SisiGames (168)"
+                                           style="white-space:nowrap;">
+                                            SisiGames (168)
+                                        </a>
+                                        <a href="/Gamelist/Smokoko-S.A."
+                                           id="Smokoko-S.A.-(1)"
+                                           target="_self"
+                                                                                      title="Smokoko S.A. (1)"
+                                           style="white-space:nowrap;">
+                                            Smokoko S.A. (1)
+                                        </a>
+                                        <a href="/Gamelist/Snapbreak-Games-AB"
+                                           id="Snapbreak-Games-AB-(220)"
+                                           target="_self"
+                                                                                      title="Snapbreak Games AB (220)"
+                                           style="white-space:nowrap;">
+                                            Snapbreak Games AB (220)
+                                        </a>
+                                        <a href="/Gamelist/Spil-Games"
+                                           id="Spil-Games-(2362)"
+                                           target="_self"
+                                                                                      title="Spil Games (2362)"
+                                           style="white-space:nowrap;">
+                                            Spil Games (2362)
+                                        </a>
+                                        <a href="/Gamelist/Sun-Temple"
+                                           id="Sun-Temple-(1)"
+                                           target="_self"
+                                                                                      title="Sun Temple (1)"
+                                           style="white-space:nowrap;">
+                                            Sun Temple (1)
+                                        </a>
+                                        <a href="/Gamelist/SupperHippo"
+                                           id="SupperHippo-(1)"
+                                           target="_self"
+                                                                                      title="SupperHippo (1)"
+                                           style="white-space:nowrap;">
+                                            SupperHippo (1)
+                                        </a>
+                                        <a href="/Gamelist/tabatoune"
+                                           id="tabatoune-(3)"
+                                           target="_self"
+                                                                                      title="tabatoune (3)"
+                                           style="white-space:nowrap;">
+                                            tabatoune (3)
+                                        </a>
+                                        <a href="/Gamelist/UncertainStudio"
+                                           id="UncertainStudio-(1)"
+                                           target="_self"
+                                                                                      title="UncertainStudio (1)"
+                                           style="white-space:nowrap;">
+                                            UncertainStudio (1)
+                                        </a>
+                                        <a href="/Gamelist/WITCHHUT-LLC"
+                                           id="WITCHHUT-LLC-(127)"
+                                           target="_self"
+                                                                                      title="WITCHHUT LLC (127)"
+                                           style="white-space:nowrap;">
+                                            WITCHHUT LLC (127)
+                                        </a>
+                                        <a href="/Gamelist/XalocFuns"
+                                           id="XalocFuns-(1)"
+                                           target="_self"
+                                                                                      title="XalocFuns (1)"
+                                           style="white-space:nowrap;">
+                                            XalocFuns (1)
+                                        </a>
+                                        <a href="/Gamelist/Yolkgames"
+                                           id="Yolkgames-(31)"
+                                           target="_self"
+                                                                                      title="Yolkgames (31)"
+                                           style="white-space:nowrap;">
+                                            Yolkgames (31)
+                                        </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <input id="dropdown-categories" type="checkbox" >
+                            <label for="dropdown-categories">Categories</label>
+                            <div class="select">
+                                <div class="search-field company">
+                                    <input type="search" name="id" id="searchCategoryBox" autocomplete="off" placeholder="Search..." />
+                                    <i id="search-category-button" class="fa fa-search"></i>
+                                </div>
+                                <div id="dvCategoryPlace">
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=1-Player"
+                                           id="1-Player-(9)"
+                                           target="_self"
+                                                                                      title="1 Player (9)"
+                                           style="white-space:nowrap;">
+                                            1 Player (9)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=2-Player"
+                                           id="2-Player-(1)"
+                                           target="_self"
+                                                                                      title="2 Player (1)"
+                                           style="white-space:nowrap;">
+                                            2 Player (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=3D"
+                                           id="3D-(18)"
+                                           target="_self"
+                                                                                      title="3D (18)"
+                                           style="white-space:nowrap;">
+                                            3D (18)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Action"
+                                           id="Action-(953)"
+                                           target="_self"
+                                                                                      title="Action (953)"
+                                           style="white-space:nowrap;">
+                                            Action (953)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Addicting"
+                                           id="Addicting-(1)"
+                                           target="_self"
+                                                                                      title="Addicting (1)"
+                                           style="white-space:nowrap;">
+                                            Addicting (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Adventure"
+                                           id="Adventure-(110)"
+                                           target="_self"
+                                                                                      title="Adventure (110)"
+                                           style="white-space:nowrap;">
+                                            Adventure (110)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Animal"
+                                           id="Animal-(55)"
+                                           target="_self"
+                                                                                      title="Animal (55)"
+                                           style="white-space:nowrap;">
+                                            Animal (55)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Arcade"
+                                           id="Arcade-(23)"
+                                           target="_self"
+                                                                                      title="Arcade (23)"
+                                           style="white-space:nowrap;">
+                                            Arcade (23)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Balance"
+                                           id="Balance-(1)"
+                                           target="_self"
+                                                                                      title="Balance (1)"
+                                           style="white-space:nowrap;">
+                                            Balance (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Basketball"
+                                           id="Basketball-(1)"
+                                           target="_self"
+                                                                                      title="Basketball (1)"
+                                           style="white-space:nowrap;">
+                                            Basketball (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Bejeweled"
+                                           id="Bejeweled-(7)"
+                                           target="_self"
+                                                                                      title="Bejeweled (7)"
+                                           style="white-space:nowrap;">
+                                            Bejeweled (7)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Bike"
+                                           id="Bike-(3)"
+                                           target="_self"
+                                                                                      title="Bike (3)"
+                                           style="white-space:nowrap;">
+                                            Bike (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Board"
+                                           id="Board-(1)"
+                                           target="_self"
+                                                                                      title="Board (1)"
+                                           style="white-space:nowrap;">
+                                            Board (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Bubble-Shooter"
+                                           id="Bubble-Shooter-(10)"
+                                           target="_self"
+                                                                                      title="Bubble Shooter (10)"
+                                           style="white-space:nowrap;">
+                                            Bubble Shooter (10)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Car"
+                                           id="Car-(34)"
+                                           target="_self"
+                                                                                      title="Car (34)"
+                                           style="white-space:nowrap;">
+                                            Car (34)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Card"
+                                           id="Card-(20)"
+                                           target="_self"
+                                                                                      title="Card (20)"
+                                           style="white-space:nowrap;">
+                                            Card (20)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Cars"
+                                           id="Cars-(27)"
+                                           target="_self"
+                                                                                      title="Cars (27)"
+                                           style="white-space:nowrap;">
+                                            Cars (27)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Celebrity"
+                                           id="Celebrity-(16)"
+                                           target="_self"
+                                                                                      title="Celebrity (16)"
+                                           style="white-space:nowrap;">
+                                            Celebrity (16)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Cooking"
+                                           id="Cooking-(144)"
+                                           target="_self"
+                                                                                      title="Cooking (144)"
+                                           style="white-space:nowrap;">
+                                            Cooking (144)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Creation"
+                                           id="Creation-(11)"
+                                           target="_self"
+                                                                                      title="Creation (11)"
+                                           style="white-space:nowrap;">
+                                            Creation (11)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Dating"
+                                           id="Dating-(5)"
+                                           target="_self"
+                                                                                      title="Dating (5)"
+                                           style="white-space:nowrap;">
+                                            Dating (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Decoration"
+                                           id="Decoration-(53)"
+                                           target="_self"
+                                                                                      title="Decoration (53)"
+                                           style="white-space:nowrap;">
+                                            Decoration (53)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Defense"
+                                           id="Defense-(2)"
+                                           target="_self"
+                                                                                      title="Defense (2)"
+                                           style="white-space:nowrap;">
+                                            Defense (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Difference"
+                                           id="Difference-(3)"
+                                           target="_self"
+                                                                                      title="Difference (3)"
+                                           style="white-space:nowrap;">
+                                            Difference (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Drawing"
+                                           id="Drawing-(5)"
+                                           target="_self"
+                                                                                      title="Drawing (5)"
+                                           style="white-space:nowrap;">
+                                            Drawing (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Dress-Up"
+                                           id="Dress-Up-(582)"
+                                           target="_self"
+                                                                                      title="Dress Up (582)"
+                                           style="white-space:nowrap;">
+                                            Dress Up (582)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Educational"
+                                           id="Educational-(1)"
+                                           target="_self"
+                                                                                      title="Educational (1)"
+                                           style="white-space:nowrap;">
+                                            Educational (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Escape"
+                                           id="Escape-(489)"
+                                           target="_self"
+                                                                                      title="Escape (489)"
+                                           style="white-space:nowrap;">
+                                            Escape (489)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Fantasy"
+                                           id="Fantasy-(1)"
+                                           target="_self"
+                                                                                      title="Fantasy (1)"
+                                           style="white-space:nowrap;">
+                                            Fantasy (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Fashion"
+                                           id="Fashion-(5)"
+                                           target="_self"
+                                                                                      title="Fashion (5)"
+                                           style="white-space:nowrap;">
+                                            Fashion (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Flight"
+                                           id="Flight-(1)"
+                                           target="_self"
+                                                                                      title="Flight (1)"
+                                           style="white-space:nowrap;">
+                                            Flight (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Flying"
+                                           id="Flying-(2)"
+                                           target="_self"
+                                                                                      title="Flying (2)"
+                                           style="white-space:nowrap;">
+                                            Flying (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Football"
+                                           id="Football-(1)"
+                                           target="_self"
+                                                                                      title="Football (1)"
+                                           style="white-space:nowrap;">
+                                            Football (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Fun"
+                                           id="Fun-(31)"
+                                           target="_self"
+                                                                                      title="Fun (31)"
+                                           style="white-space:nowrap;">
+                                            Fun (31)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Funny"
+                                           id="Funny-(4)"
+                                           target="_self"
+                                                                                      title="Funny (4)"
+                                           style="white-space:nowrap;">
+                                            Funny (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Girls"
+                                           id="Girls-(1420)"
+                                           target="_self"
+                                                                                      title="Girls (1420)"
+                                           style="white-space:nowrap;">
+                                            Girls (1420)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Halloween"
+                                           id="Halloween-(2)"
+                                           target="_self"
+                                                                                      title="Halloween (2)"
+                                           style="white-space:nowrap;">
+                                            Halloween (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Hidden-Objects"
+                                           id="Hidden-Objects-(29)"
+                                           target="_self"
+                                                                                      title="Hidden Objects (29)"
+                                           style="white-space:nowrap;">
+                                            Hidden Objects (29)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=HTML5"
+                                           id="HTML5-(58)"
+                                           target="_self"
+                                                                                      title="HTML5 (58)"
+                                           style="white-space:nowrap;">
+                                            HTML5 (58)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Jigsaw-Puzzle"
+                                           id="Jigsaw-Puzzle-(1)"
+                                           target="_self"
+                                                                                      title="Jigsaw Puzzle (1)"
+                                           style="white-space:nowrap;">
+                                            Jigsaw Puzzle (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Kids"
+                                           id="Kids-(21)"
+                                           target="_self"
+                                                                                      title="Kids (21)"
+                                           style="white-space:nowrap;">
+                                            Kids (21)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Mahjong"
+                                           id="Mahjong-(21)"
+                                           target="_self"
+                                                                                      title="Mahjong (21)"
+                                           style="white-space:nowrap;">
+                                            Mahjong (21)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Make-Over"
+                                           id="Make-Over-(98)"
+                                           target="_self"
+                                                                                      title="Make Over (98)"
+                                           style="white-space:nowrap;">
+                                            Make Over (98)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Make-up"
+                                           id="Make-up-(22)"
+                                           target="_self"
+                                                                                      title="Make up (22)"
+                                           style="white-space:nowrap;">
+                                            Make up (22)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Management"
+                                           id="Management-(3)"
+                                           target="_self"
+                                                                                      title="Management (3)"
+                                           style="white-space:nowrap;">
+                                            Management (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Manicure-%26-Pedicure"
+                                           id="Manicure-&amp;-Pedicure-(1)"
+                                           target="_self"
+                                                                                      title="Manicure &amp; Pedicure (1)"
+                                           style="white-space:nowrap;">
+                                            Manicure &amp; Pedicure (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Match-3"
+                                           id="Match-3-(28)"
+                                           target="_self"
+                                                                                      title="Match-3 (28)"
+                                           style="white-space:nowrap;">
+                                            Match-3 (28)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Mathematical"
+                                           id="Mathematical-(1)"
+                                           target="_self"
+                                                                                      title="Mathematical (1)"
+                                           style="white-space:nowrap;">
+                                            Mathematical (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Memory"
+                                           id="Memory-(4)"
+                                           target="_self"
+                                                                                      title="Memory (4)"
+                                           style="white-space:nowrap;">
+                                            Memory (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Motorbike"
+                                           id="Motorbike-(1)"
+                                           target="_self"
+                                                                                      title="Motorbike (1)"
+                                           style="white-space:nowrap;">
+                                            Motorbike (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Multiplayer"
+                                           id="Multiplayer-(2)"
+                                           target="_self"
+                                                                                      title="Multiplayer (2)"
+                                           style="white-space:nowrap;">
+                                            Multiplayer (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Nail"
+                                           id="Nail-(4)"
+                                           target="_self"
+                                                                                      title="Nail (4)"
+                                           style="white-space:nowrap;">
+                                            Nail (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Parking"
+                                           id="Parking-(28)"
+                                           target="_self"
+                                                                                      title="Parking (28)"
+                                           style="white-space:nowrap;">
+                                            Parking (28)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Physics"
+                                           id="Physics-(13)"
+                                           target="_self"
+                                                                                      title="Physics (13)"
+                                           style="white-space:nowrap;">
+                                            Physics (13)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Platform"
+                                           id="Platform-(12)"
+                                           target="_self"
+                                                                                      title="Platform (12)"
+                                           style="white-space:nowrap;">
+                                            Platform (12)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Point-And-Click"
+                                           id="Point-And-Click-(5)"
+                                           target="_self"
+                                                                                      title="Point And Click (5)"
+                                           style="white-space:nowrap;">
+                                            Point And Click (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Princess"
+                                           id="Princess-(4)"
+                                           target="_self"
+                                                                                      title="Princess (4)"
+                                           style="white-space:nowrap;">
+                                            Princess (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Puzzle"
+                                           id="Puzzle-(239)"
+                                           target="_self"
+                                                                                      title="Puzzle (239)"
+                                           style="white-space:nowrap;">
+                                            Puzzle (239)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Quiz"
+                                           id="Quiz-(4)"
+                                           target="_self"
+                                                                                      title="Quiz (4)"
+                                           style="white-space:nowrap;">
+                                            Quiz (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Racing"
+                                           id="Racing-(100)"
+                                           target="_self"
+                                                                                      title="Racing (100)"
+                                           style="white-space:nowrap;">
+                                            Racing (100)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Running"
+                                           id="Running-(6)"
+                                           target="_self"
+                                                                                      title="Running (6)"
+                                           style="white-space:nowrap;">
+                                            Running (6)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Seasonal"
+                                           id="Seasonal-(26)"
+                                           target="_self"
+                                                                                      title="Seasonal (26)"
+                                           style="white-space:nowrap;">
+                                            Seasonal (26)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Shoot-%27Em-Up"
+                                           id="Shoot-&#39;Em-Up-(4)"
+                                           target="_self"
+                                                                                      title="Shoot &#39;Em Up (4)"
+                                           style="white-space:nowrap;">
+                                            Shoot &#39;Em Up (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Shooter"
+                                           id="Shooter-(4)"
+                                           target="_self"
+                                                                                      title="Shooter (4)"
+                                           style="white-space:nowrap;">
+                                            Shooter (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Shooting"
+                                           id="Shooting-(16)"
+                                           target="_self"
+                                                                                      title="Shooting (16)"
+                                           style="white-space:nowrap;">
+                                            Shooting (16)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Shopping"
+                                           id="Shopping-(3)"
+                                           target="_self"
+                                                                                      title="Shopping (3)"
+                                           style="white-space:nowrap;">
+                                            Shopping (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Simulation"
+                                           id="Simulation-(18)"
+                                           target="_self"
+                                                                                      title="Simulation (18)"
+                                           style="white-space:nowrap;">
+                                            Simulation (18)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Skill"
+                                           id="Skill-(244)"
+                                           target="_self"
+                                                                                      title="Skill (244)"
+                                           style="white-space:nowrap;">
+                                            Skill (244)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Soccer"
+                                           id="Soccer-(6)"
+                                           target="_self"
+                                                                                      title="Soccer (6)"
+                                           style="white-space:nowrap;">
+                                            Soccer (6)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Sports"
+                                           id="Sports-(30)"
+                                           target="_self"
+                                                                                      title="Sports (30)"
+                                           style="white-space:nowrap;">
+                                            Sports (30)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Strategy"
+                                           id="Strategy-(3)"
+                                           target="_self"
+                                                                                      title="Strategy (3)"
+                                           style="white-space:nowrap;">
+                                            Strategy (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Sudoku"
+                                           id="Sudoku-(12)"
+                                           target="_self"
+                                                                                      title="Sudoku (12)"
+                                           style="white-space:nowrap;">
+                                            Sudoku (12)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Super-Hero"
+                                           id="Super-Hero-(2)"
+                                           target="_self"
+                                                                                      title="Super Hero (2)"
+                                           style="white-space:nowrap;">
+                                            Super Hero (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Tetris"
+                                           id="Tetris-(1)"
+                                           target="_self"
+                                                                                      title="Tetris (1)"
+                                           style="white-space:nowrap;">
+                                            Tetris (1)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Time-Management"
+                                           id="Time-Management-(2)"
+                                           target="_self"
+                                                                                      title="Time Management (2)"
+                                           style="white-space:nowrap;">
+                                            Time Management (2)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Tower-Defense"
+                                           id="Tower-Defense-(5)"
+                                           target="_self"
+                                                                                      title="Tower Defense (5)"
+                                           style="white-space:nowrap;">
+                                            Tower Defense (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Truck"
+                                           id="Truck-(5)"
+                                           target="_self"
+                                                                                      title="Truck (5)"
+                                           style="white-space:nowrap;">
+                                            Truck (5)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Uphill-Racing"
+                                           id="Uphill-Racing-(4)"
+                                           target="_self"
+                                                                                      title="Uphill Racing (4)"
+                                           style="white-space:nowrap;">
+                                            Uphill Racing (4)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=War"
+                                           id="War-(3)"
+                                           target="_self"
+                                                                                      title="War (3)"
+                                           style="white-space:nowrap;">
+                                            War (3)
+                                        </a>
+                                        <a href="/Catalog/GetGamesListByAllFilters?categName=Wedding"
+                                           id="Wedding-(5)"
+                                           target="_self"
+                                                                                      title="Wedding (5)"
+                                           style="white-space:nowrap;">
+                                            Wedding (5)
+                                        </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="tiles">
+                            <a href="/Games/Dress-Up/Princess-Best-Date-Ever.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Princess Best Date Ever"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/f919360a54af4614bd82dca1d4a2fc1e.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Princess Best Date Ever</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Sery-Fashion-Cover-Dress-Up.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Sery Fashion Cover Dress Up"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/95cae4a5df6f4be19e513ca374377be9.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Sery Fashion Cover Dress Up</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Princesses-Thrift-Shop-Challenge.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Princesses Thrift Shop Challenge"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/818a0a8aad884d02bb9f9211aabda5fb.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Princesses Thrift Shop Challenge</p>
+                            </a>
+                            <a href="/Games/Girls/Kitty-Care-and-Grooming.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Kitty Care and Grooming"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/10f59543d2234427945e03507f2f02ac.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Kitty Care and Grooming</p>
+                            </a>
+                            <a href="/Games/Girls/Fat-to-Fit-Princess-Fitness.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Fat to Fit Princess Fitness"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/d7a64a6138ae46d6808a39b7543ab4ce.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Fat to Fit Princess Fitness</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Rosanna-Pansino-Dressup.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Rosanna Pansino Dressup"                                                   class="flash">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/1225645b66754e199dc086f73e68cdc7.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Rosanna Pansino Dressup</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Rosanna-Pansino-Dress-Up.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Rosanna Pansino Dress Up"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/1255e56c6397480880b118ba25144eef.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Rosanna Pansino Dress Up</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Wedding-Shopping-with-Bridesmaids.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Wedding Shopping with Bridesmaids"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/d06005d465954d53807166a3f5facae2.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Wedding Shopping with Bridesmaids</p>
+                            </a>
+                            <a href="/Games/Puzzle/3-Pandas-HTML5.html"
+                               style="float:left"
+                               target="_self"
+                                 title="3 Pandas HTML5"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/e0def4be85be486cb4c8b576b7c969fa.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">3 Pandas HTML5</p>
+                            </a>
+                            <a href="/Games/Action/Dynamons-World.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Dynamons World"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/14d10c2b37794aafad858a6e90120e23.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Dynamons World</p>
+                            </a>
+                            <a href="/Games/Skill/Numbers-Sliding-Puzzle.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Numbers Sliding Puzzle"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/fc60d1e35a5c4ee1989c559259272d7b.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Numbers Sliding Puzzle</p>
+                            </a>
+                            <a href="/Games/Girls/Minion-Wedding-Hairstyles.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Minion Wedding Hairstyles"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/60fe66cba44f40ffa9f6355829123d90.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Minion Wedding Hairstyles</p>
+                            </a>
+                            <a href="/Games/Girls/Ice-Queen-Romantic-Date.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Ice Queen Romantic Date"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/689b3346e1e94f43807efbaadca5b615.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Ice Queen Romantic Date</p>
+                            </a>
+                            <a href="/Games/Puzzle/Jelly-Escape.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Jelly Escape"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/e7c62af6afd045f59d7aed84bbb8cd49.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Jelly Escape</p>
+                            </a>
+                            <a href="/Games/Girls/Ice-Queen-Baby-Shower-Fun.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Ice Queen Baby Shower Fun"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/08bc2c8a8f524d8aa74753b403b7cf86.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Ice Queen Baby Shower Fun</p>
+                            </a>
+                            <a href="/Games/Princess/Princess-Best-Friends-Day.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Princess Best Friends Day"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/e9b41f1dc1084302ba9dbb65f706078f.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Princess Best Friends Day</p>
+                            </a>
+                            <a href="/Games/Cooking/Toastellia.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Toastellia"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/19672eaf8119448687a36e95479a2f51.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Toastellia</p>
+                            </a>
+                            <a href="/Games/Puzzle/Tiny-Diggers.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Tiny Diggers"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/57e97ca0fe674bb6ad5ddc08c5da83f9.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Tiny Diggers</p>
+                            </a>
+                            <a href="/Games/Arcade/Idle-Oasis.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Idle Oasis"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/67cf6317193343fa9562ab014f1f2364.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Idle Oasis</p>
+                            </a>
+                            <a href="/Games/Girls/Superlady-Movie.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Superlady Movie"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/fbf2aa6ad2164c658d9626ba690e5949.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Superlady Movie</p>
+                            </a>
+                            <a href="/Games/Skill/Cubefield.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Cubefield"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/a72950d6b65d493d972644c47a988192.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Cubefield</p>
+                            </a>
+                            <a href="/Games/1-Player/Undead-Drive.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Undead Drive"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/5641e1f8019d48c1ac7a45b4fe588034.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Undead Drive</p>
+                            </a>
+                            <a href="/Games/Balance/Super-Sticky-Stacker.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Super Sticky Stacker"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/70f9fcac98f44c84b9d7e7a09c0834a5.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Super Sticky Stacker</p>
+                            </a>
+                            <a href="/Games/Mahjong/Mahjong-Connect-2.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Mahjong Connect 2"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/0e9740e72bf147c0bc0dfbfe9ce3fb98.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Mahjong Connect 2</p>
+                            </a>
+                            <a href="/Games/Match-3/Jelly-Madness-2.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Jelly Madness 2"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/015bbadfcafb4374813f8803b1737222.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Jelly Madness 2</p>
+                            </a>
+                            <a href="/Games/Match-3/Jelly-Madness.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Jelly Madness"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/ed40354e856f4aae8ccac8b98d70dec3.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Jelly Madness</p>
+                            </a>
+                            <a href="/Games/Girls/Flirting-on-School.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Flirting on School"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/3f21bdf56f534cb0b408e661936004c1.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Flirting on School</p>
+                            </a>
+                            <a href="/Games/Bubble-Shooter/Bouncing-Balls.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Bouncing Balls"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/7fbce90e7db74cf3817cbfac0e6684c2.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Bouncing Balls</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Rachel-Summer-Fashion-Trend!.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Rachel Summer Fashion Trend!"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/9c63e3e54ebc4bd18d015817ce32c8e8.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Rachel Summer Fashion Trend!</p>
+                            </a>
+                            <a href="/Games/Fashion/My-Unique-Fashion-Story.html"
+                               style="float:left"
+                               target="_self"
+                                 title="My Unique Fashion Story"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/daa30a69dd1e4f2d9d0848a958980eda.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">My Unique Fashion Story</p>
+                            </a>
+                            <a href="/Games/Dress-Up/Beauty-And-The-Beat.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Beauty And The Beat"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/367749272d3e4a27b5fd5a60af49bdfb.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Beauty And The Beat</p>
+                            </a>
+                            <a href="/Games/Girls/New-Girl-In-High-School.html"
+                               style="float:left"
+                               target="_self"
+                                 title="New Girl In High School"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/50717c5901f54a41adc87886140b3e7e.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">New Girl In High School</p>
+                            </a>
+                            <a href="/Games/Escape/Yakushima-Forest-Escape.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Yakushima Forest Escape"                                                   class="flash">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/2f7b0ad19bfb41c6aa6e475780b332e1.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Yakushima Forest Escape</p>
+                            </a>
+                            <a href="/Games/Platform/Prince-and-Caged-Princess.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Prince and Caged Princess"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/8d749daa6bca4ff5abc4d56c5f42d36b.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Prince and Caged Princess</p>
+                            </a>
+                            <a href="/Games/Puzzle/Gradient.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Gradient"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/ddfc36fd9d37442a98a6d6e39a7f3044.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Gradient</p>
+                            </a>
+                            <a href="/Games/Girls/Wonder-Woman-Movie.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Wonder Woman Movie"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/477d67fcc9eb458dae65a5797eecdb45.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Wonder Woman Movie</p>
+                            </a>
+                            <a href="/Games/Girls/Princess-Sale-Rush.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Princess Sale Rush"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/c97b9f02e5d44444af2362952acf5fcd.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Princess Sale Rush</p>
+                            </a>
+                            <a href="/Games/Cooking/Pony-Cooking-Rainbow-Cake.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Pony Cooking Rainbow Cake"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Pony Cooking Rainbow Cake</p>
+                            </a>
+                            <a href="/Games/Animal/Unicorn-Beauty-Salon.html"
+                               style="float:left"
+                               target="_self"
+                                 title="Unicorn Beauty Salon"                                                   class="html5">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/f68b4b4d812f4aa888c949c2d22426cc.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">Unicorn Beauty Salon</p>
+                            </a>
+                            <a href="/Games/Fantasy/New-Island-Escape.html"
+                               style="float:left"
+                               target="_self"
+                                 title="New Island Escape"                                                   class="flash">
+                                <span style="width: 100%; height: 150px; overflow:hidden;">
+
+                                    <img src="http://img.gamedistribution.com/1da762bd04b94d86b74bcf114450a192.jpg"
+                                         style="width: 100%; height: auto; min-height:100%; max-height:150px;" />
+                                </span>
+                                <p style="width:180px;display:inline-block;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis;padding:0px !important">New Island Escape</p>
+                            </a>
+                    </div>
+<div class="pagination">
+    
+
+
+
+        <a target="_self" title="" class="hidden-mobile previous disabled">
+            <i class="fa fa-step-backward"></i>
+        </a>
+        <a target="_self" title="" class="previous disabled">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+
+                <a href="/Games/1"
+                   target="_self" title=""   class="selected"      >
+                    1
+                </a>
+                <a href="/Games/2"
+                   target="_self" title="" >
+                    2
+                </a>
+                <a href="/Games/3"
+                   target="_self" title="" >
+                    3
+                </a>
+                <a href="/Games/4"
+                   target="_self" title="" >
+                    4
+                </a>
+                <a href="/Games/5"
+                   target="_self" title="" >
+                    5
+                </a>
+                <a href="/Games/6"
+                   target="_self" title="" >
+                    6
+                </a>
+                <a href="/Games/7"
+                   target="_self" title="" >
+                    7
+                </a>
+
+        <a href="/Games/2"
+           target="_self" title="" class="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+        <a href="/Games/128"
+           target="_self" title="" class="hidden-mobile next">
+            <i class="fa fa-step-forward"></i>
+        </a>
+
+</div>
+<style type="text/css">
+    @media only screen and (max-device-width: 480px) and (orientation:portrait) {
+        a.hidden-mobile {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-device-width: 736px) and (orientation:landscape) {
+        a.hidden-mobile {
+            display: none;
+        }
+    }
+</style>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<div id="mdlRssBuilder" title="RSS BUILDER" >
+    <form>
+        <fieldset style="overflow:hidden">
+            <label>
+                Company
+            </label><select id="ddlCompany">
+                <option id="All" selected="selected">All</option>
+                    <option id="95988DB3-F63F-40F9-A264-329787B6B9FC">African Games</option>
+                    <option id="9063AF32-BD0A-4D0D-87D0-39F64E48688D">ajazgames</option>
+                    <option id="C389BAE0-E135-471F-9A92-385558D3526F">AlanWebInvestments</option>
+                    <option id="432D5ED8-A04A-46C3-A584-55E29AA0445B">BestEscapeGames </option>
+                    <option id="E11DA8DA-72C7-48C0-8425-DD046A41BAEF">bestphysics</option>
+                    <option id="871623F5-FFAE-47E6-A594-CB80F7A7A06F">Billie&#39;s Illustrations</option>
+                    <option id="86FABB74-1A7E-46C6-9302-69E4FDD09EF2">Bitent Media</option>
+                    <option id="A65A4B61-96D6-4E0E-B23D-97DCC2FAF258">Box10.com</option>
+                    <option id="0FE06825-0FD3-4DD0-B3D0-AC7F0DA56711">Brutal Inc</option>
+                    <option id="477771D7-760F-4E54-81EC-9F7FB987C3B9">Chilican</option>
+                    <option id="DAF27E5E-3C6D-4439-809D-949EEAC65A45">Creative Games</option>
+                    <option id="4036895F-5BFF-4B34-ACC8-1651027D2C49">Daria Games</option>
+                    <option id="D6B9E5D4-98E0-4453-BFE7-8198C2D9FC41">DariaGames.com</option>
+                    <option id="32EDF8E4-8D55-490F-8284-31488C9F2B2B">Dav</option>
+                    <option id="D1EEEBC2-8EA0-40DF-9F9D-F23ADEA65B31">Doll Divine</option>
+                    <option id="53931D29-F3F5-436A-95A3-C488C945918E">Dominick Bruno Web/Advertising</option>
+                    <option id="C453433C-253C-427E-B58D-BA7B63A7BF6A">DressUpWho</option>
+                    <option id="002BDE4F-462E-4167-A106-F6E105C8E509">Empire Games SRL</option>
+                    <option id="4A59D85A-13FF-452B-B78E-6D30313527C7">EnaGames</option>
+                    <option id="F2EE591B-B7F9-4E77-AFD0-010970236FF5">Enjoydressup</option>
+                    <option id="E2877842-3020-433D-A67C-DCA9CFF3F4ED">Famobi GmbH</option>
+                    <option id="E3D8CD08-78DA-4D16-B88A-352831EEA379">Flashgames</option>
+                    <option id="CA89CB8B-ABF3-4508-AB6E-DD112B5515AC">Funmoth Games</option>
+                    <option id="9853D218-26DB-44CC-9C7C-8862D21A8583">Funtomic</option>
+                    <option id="FB2B5D8E-9E6E-40E0-9909-634EBA5E5F8F">Funtomic</option>
+                    <option id="91CF7728-529B-46E4-A029-7024121FE74E">G.Indi</option>
+                    <option id="C2E9BC8B-92DE-4445-987E-21F7086360FF">Gaan Media</option>
+                    <option id="82B343C2-7535-41F8-A620-C518E96DE8F6">Game Distribution</option>
+                    <option id="F5580ED5-EE8B-44A8-8C76-A6691A21AE08">Gamerbizindia</option>
+                    <option id="1BE11EFF-2AAB-43F5-9FF8-B74D991F3D81">Games Banner Net Inc</option>
+                    <option id="4ED9EE15-CD3B-42DA-AFF4-A2CB65F233D3">Games Banner Network</option>
+                    <option id="6CB35781-025C-4514-9156-81C4150BBFF8">Gamesape.com</option>
+                    <option id="822C5C4B-0DFA-4756-B492-ED6222642E46">Girlgames4u.com</option>
+                    <option id="D4A1EB81-BE5B-43D9-8659-4096D9E7DE42">GloomeGames</option>
+                    <option id="50CB25B9-ADD0-44C1-B1A5-F8F15D9D9497">GlossyPlay</option>
+                    <option id="661637E1-B128-4F54-B820-E9234206398C">GRYDLADZIECI-24.PL</option>
+                    <option id="D354E3D0-811D-405B-A373-34DFB1BBF6D7">Idea</option>
+                    <option id="D2782CAD-D628-433C-A32C-0957ACD37AAF">Idea Studios</option>
+                    <option id="6B5AA577-449F-4138-A46C-ADB8E045B633">IdeaStudios</option>
+                    <option id="825C6B55-DEDA-45B5-AFFC-F72C5E501AD1">IdeaStudios</option>
+                    <option id="CC445348-5621-4515-908B-6B1FBDE5C78A">igirlgames</option>
+                    <option id="FCC76B1A-D958-47D3-9773-3C6FFF5F8568">Inlogic Software</option>
+                    <option id="BDCAEC85-DB39-41DF-A8DE-BE709F91B823">jeuxcom</option>
+                    <option id="49902FFB-24ED-4E3A-A9D8-87146A33BF88">Kaiser Games GmbH</option>
+                    <option id="0D5F5E86-FEB8-421A-8930-103B37748096">Kawaii Games</option>
+                    <option id="7438F94E-3D3D-42EB-B15F-3E57E9FCA6F2">KeyGames.com</option>
+                    <option id="5FA4301A-AE01-45C7-82CF-34800B396A7D">Longames TEC Co.,Ltd</option>
+                    <option id="6D254FD8-70FE-443D-B809-B09280B429C8">MB2</option>
+                    <option id="A2D98ACC-25FE-473B-A3D9-D8F193589BA5">Mirchi Games</option>
+                    <option id="0FE7FCFB-C070-4624-9263-122C7F42ADA2">MyCuteGames</option>
+                    <option id="1D033D85-1143-48BA-9B70-7BBE699C88C8">Next Vision Solutions</option>
+                    <option id="0330C521-1CFE-4A5B-BB93-7FB98A885902">noesgames</option>
+                    <option id="11C49AFE-68A3-4B59-A335-CBE839C30CE7">Nowgamez.com</option>
+                    <option id="60E69D12-17C8-4766-88A3-AF8D6465DCF4">NSR Games</option>
+                    <option id="5014844B-BE34-48A0-B8B8-E131DDFA85A2">OK Interactive</option>
+                    <option id="ABD36C6C-E74B-4BA7-BE87-0AB01F98D30D">OrangeGames</option>
+                    <option id="F6BA10C4-D755-4E68-AA70-B950E8B3870C">Oscar Intermed</option>
+                    <option id="43A37EB5-2C35-44C4-8362-6453EEC736C3">Pinkygirlgames</option>
+                    <option id="79227DB7-BF9A-4408-AE2D-59D32EF3DF5F">Play Belle Games</option>
+                    <option id="67E3E045-939B-4789-BFD4-64BEB3929216">Play Match 3 Games</option>
+                    <option id="A8ACB0B3-BCA5-4807-8397-B6809D8AB233">PlayPink.com</option>
+                    <option id="54C944A4-AD5F-499E-9808-04FFF4C4D054">Purplesoft</option>
+                    <option id="E7768B5F-70C6-4F8C-9669-56B982E1B5D4">QkyGames</option>
+                    <option id="3714A5E7-071D-4AA6-B7BC-F1EFF869396F">Racz Ioan Paul II</option>
+                    <option id="9098B1C0-C2B6-4B1F-BADB-CD10E0212BCF">RavalMatic</option>
+                    <option id="6F95B94A-BA74-42D2-ADFF-5960D0132B9F">Rinmaru Games</option>
+                    <option id="4A75CE7F-7EA4-4C43-8452-C321272BD52A">Signal Game Studio</option>
+                    <option id="3E8530BC-589B-4120-9E4F-386E6E4D91A2">SisiGames</option>
+                    <option id="8E1CD899-0B13-4A1C-8CD0-19E30C906284">Smokoko S.A.</option>
+                    <option id="D8F76FA3-9126-4E85-ABF2-D92693A2BB14">Snapbreak Games AB</option>
+                    <option id="25FAF025-4828-439B-A457-EBDAA0CEB168">Spil Games</option>
+                    <option id="B2859630-AE33-4644-96AD-E1935A000F22">Sun Temple</option>
+                    <option id="680B9916-A9DD-427F-9ECC-58B1F285F1AD">SupperHippo</option>
+                    <option id="681FE4E2-9995-4A27-91BD-9E2EFBD4271D">tabatoune</option>
+                    <option id="B16224FF-9D4E-437C-8C42-1E91B6B213B0">UncertainStudio</option>
+                    <option id="878A650C-EC64-4E6B-B50B-BD661A8B4B61">WITCHHUT LLC</option>
+                    <option id="219F4C40-E490-4474-8249-85AC4FAF5FFF">XalocFuns</option>
+                    <option id="4CA70B2B-3F0F-4E98-B2E2-50C2C6D234D8">Yolkgames</option>
+            </select>
+            <label>
+                Category
+            </label><select id="ddlCategory">
+                <option selected="selected">All</option>
+                    <option>1 Player</option>
+                    <option>2 Player</option>
+                    <option>3D</option>
+                    <option>Action</option>
+                    <option>Addicting</option>
+                    <option>Adventure</option>
+                    <option>Animal</option>
+                    <option>Arcade</option>
+                    <option>Balance</option>
+                    <option>Basketball</option>
+                    <option>Bejeweled</option>
+                    <option>Bike</option>
+                    <option>Board</option>
+                    <option>Bubble Shooter</option>
+                    <option>Car</option>
+                    <option>Card</option>
+                    <option>Cars</option>
+                    <option>Celebrity</option>
+                    <option>Cooking</option>
+                    <option>Creation</option>
+                    <option>Dating</option>
+                    <option>Decoration</option>
+                    <option>Defense</option>
+                    <option>Difference</option>
+                    <option>Drawing</option>
+                    <option>Dress Up</option>
+                    <option>Educational</option>
+                    <option>Escape</option>
+                    <option>Fantasy</option>
+                    <option>Fashion</option>
+                    <option>Flight</option>
+                    <option>Flying</option>
+                    <option>Football</option>
+                    <option>Fun</option>
+                    <option>Funny</option>
+                    <option>Girls</option>
+                    <option>Halloween</option>
+                    <option>Hidden Objects</option>
+                    <option>HTML5</option>
+                    <option>Jigsaw Puzzle</option>
+                    <option>Kids</option>
+                    <option>Mahjong</option>
+                    <option>Make Over</option>
+                    <option>Make up</option>
+                    <option>Management</option>
+                    <option>Manicure &amp; Pedicure</option>
+                    <option>Match-3</option>
+                    <option>Mathematical</option>
+                    <option>Memory</option>
+                    <option>Motorbike</option>
+                    <option>Multiplayer</option>
+                    <option>Nail</option>
+                    <option>Parking</option>
+                    <option>Physics</option>
+                    <option>Platform</option>
+                    <option>Point And Click</option>
+                    <option>Princess</option>
+                    <option>Puzzle</option>
+                    <option>Quiz</option>
+                    <option>Racing</option>
+                    <option>Running</option>
+                    <option>Seasonal</option>
+                    <option>Shoot &#39;Em Up</option>
+                    <option>Shooter</option>
+                    <option>Shooting</option>
+                    <option>Shopping</option>
+                    <option>Simulation</option>
+                    <option>Skill</option>
+                    <option>Soccer</option>
+                    <option>Sports</option>
+                    <option>Strategy</option>
+                    <option>Sudoku</option>
+                    <option>Super Hero</option>
+                    <option>Tetris</option>
+                    <option>Time Management</option>
+                    <option>Tower Defense</option>
+                    <option>Truck</option>
+                    <option>Uphill Racing</option>
+                    <option>War</option>
+                    <option>Wedding</option>
+            </select>
+            <label>
+                Format
+            </label><select id="ddlFormat">
+                <option selected="selected">xml</option>
+                <option>json</option>
+            </select>
+            <label>
+                Item
+            </label><select id="ddlLimit">
+                <option selected="selected">10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+            </select>
+            <label>
+                Offset
+            </label><select id="ddlOffset">
+                <option selected="selected">1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </fieldset>
+    </form>
+</div>
+<script>
+
+    jQuery(function ($) {
+
+        var mdlRssBuilder = $("#mdlRssBuilder").dialog({
+            autoOpen: false,
+            height: 600,
+            width: 500,
+            modal: true,
+            resizable: false,
+            buttons: {
+                Cancel: function () {
+                    mdlRssBuilder.dialog("close");
+                },
+                Ok: function () {
+
+                    var regId = $("#ddlCompany option:selected").attr("id")
+                    var category = $('#ddlCategory').val();
+                    var format = $('#ddlFormat').val();
+                    var limit = $('#ddlLimit').val();
+                    var offset = $('#ddlOffset').val();
+
+                    var query = '/' + regId + '/?' + 'category=' + category + '&limit=' + limit + '&offset=' + offset + '&format=' + format;
+                    window.open("http://games.gamedistribution.com" + query);
+                }
+            },
+            close: function () {
+                $("#addGameTitle").val("");
+            }
+        });
+
+        $("#btnRssBuilder").click(function () {
+            mdlRssBuilder.dialog("open");
+        });
+
+
+        $('#ddlCompany').change(function () {
+
+            var value = $(this).val();
+
+            $.ajax({
+                type: "POST",
+                url: '/Catalog/getCategoriesByCompanyName',
+                data: { "companyName": $("#ddlCompany option:selected").text() },
+                success: function (data) {
+
+                    $('#ddlCategory').html("");
+                    $("#ddlCategory").append($('<option></option>').text('All'));
+                    $.each(data, function (i, item) {
+                        $("#ddlCategory").append($('<option></option>').text(item.Title));
+                    });
+                }
+            });
+        });
+
+        var timerId = 0;
+
+        function lookup(inputString) {
+            if (inputString.length < 3) {
+                $('#suggestions').fadeOut();
+            } else {
+                $('#suggestions').css({ 'left': $("#searchBox").position().left + 'px', 'top': ($("#searchBox").position().top + 33) + 'px' });
+                setSearch();
+            }
+        }
+
+        function setSearch() {
+            if (timerId != 0) {
+                clearTimeout(timerId);
+                timerId = 0;
+            }
+            timerId = setTimeout(getSearch, 0);
+            return true;
+        }
+
+        function getSearch() {
+            timerId = 0;
+            $.ajax({
+                type: "POST",
+                url: '/Catalog/SearchGame',
+                data: { gameTitle: $("#searchBox").val() },
+                success: function (data) {
+                    $('#suggestions').fadeIn();
+                    $('#suggestions').html(data);
+                }
+            });
+        }
+
+        function getSearchedCompany(isCancelled) {
+            var checkboxes = document.querySelectorAll('input[name="gameType"]:checked'), values = [];
+            Array.prototype.forEach.call(checkboxes, function (el) {
+                values.push(el.value);
+            });
+            var companyName_ = "";
+
+            if (isCancelled == 0) {
+                companyName_ = "";
+            }
+            $.ajax({
+                type: "POST",
+                url: '/Catalog/SearchCompany',
+                data: { "companyWord": $("#searchCompanyBox").val(), "companyName": companyName_, "categName": "", "typeId": "html5,flash".replace(",", "-"), "SearchText": $("#searchBox").val() },
+                success: function (data) {
+                    $('#dvCompanyPlace').fadeIn();
+                    $('#dvCompanyPlace').html(data);
+                }
+            });
+        }
+        function getSearchedCategory(isCancelled) {
+            var checkboxes = document.querySelectorAll('input[name="gameType"]:checked'), values = [];
+            Array.prototype.forEach.call(checkboxes, function (el) {
+                values.push(el.value);
+            });
+            var categoryName_ = "";
+
+            if (isCancelled == 0) {
+                categoryName_ = "";
+            }
+            $.ajax({
+                type: "POST",
+                url: '/Catalog/SearchCategory',
+                data: { "categoryWord": $("#searchCategoryBox").val(), "companyName": "", "categName": categoryName_, "typeId": "html5,flash".replace(",", "-"), "SearchText": $("#searchBox").val() },
+                success: function (data) {
+                    $('#dvCategoryPlace').fadeIn();
+                    $('#dvCategoryPlace').html(data);
+                }
+            });
+        }
+        function ChangeItemClass(item, newClass) {
+            $("#" + item).removeClass();
+            $("#" + item).addClass(newClass);
+        }
+
+        function ReturnUrl(extractCompany, extractCategory) {
+            var checkboxes = document.querySelectorAll('input[name="gameType"]:checked'), values = [];
+            Array.prototype.forEach.call(checkboxes, function (el) {
+                values.push(el.value);
+            });
+            var searchText_ = $("#searchBox").val();
+            var url_ = "/Gamelist/";
+            var parameters = "";
+
+            if ("" != "" && extractCompany == 0) {
+                parameters += "".replace(" ", "-").replace("/","_") + "/";
+            }
+            else {
+                parameters += "allcompanies/"
+            }
+
+            if ("" != "" && extractCategory == 0) {
+                parameters += "".replace(" ", "-") + "/";
+            }
+            else {
+                parameters += "allcategories/";
+            }
+
+            if (values != "") {
+                parameters += values + "/";
+            }
+            else {
+                parameters += "allgametypes/";
+            }
+
+            if (searchText_ != "" && searchText_ != "undefined") {
+                parameters += $("#searchBox").val();
+            }
+
+            url_ += parameters;
+
+            return url_;
+        }
+
+        var cssObj = {
+            'box-shadow': '#aaa 5px 10px 10px',
+            '-webkit-box-shadow': '#aaa 5px 10px 10px',
+            '-moz-box-shadow': '#aaa 5px 10px 10px'
+        };
+        $("#suggestions").css(cssObj);
+
+        $(this).click(function () {
+            $('#suggestions').fadeOut();
+        });
+
+        $("#searchBox").keyup(function () {
+            lookup($("#searchBox").val());
+        });
+
+
+        $(".checkedType").click(function () {
+            window.location.href = ReturnUrl(0, 0);
+        });
+
+
+        $("#search-button").click(function () {
+            $("#searchBox").val("");
+            ChangeItemClass("search-button", "fa fa-search");
+            window.location.href = ReturnUrl(0, 0);
+        });
+
+
+        $("#search-category-button").click(function () {
+            var checkboxes = document.querySelectorAll('input[name="gameType"]:checked'), values = [];
+            Array.prototype.forEach.call(checkboxes, function (el) {
+                values.push(el.value);
+            });
+            $("#searchCategoryBox").val("");
+            ChangeItemClass("search-category-button", "fa fa-search");
+            getSearchedCategory(1);
+            window.location.href = ReturnUrl(0, 1);
+        });
+
+
+        $("#search-company-button").click(function () {
+            var checkboxes = document.querySelectorAll('input[name="gameType"]:checked'), values = [];
+            Array.prototype.forEach.call(checkboxes, function (el) {
+                values.push(el.value);
+            });
+            $("#searchCompanyBox").val("");
+            ChangeItemClass("search-company-button", "fa fa-search");
+            getSearchedCompany(1);
+            window.location.href = ReturnUrl(1, 0);
+        });
+
+        $(document).ready(function () {
+            $("#searchBox").val("");
+            $("#searchCompanyBox").val("");
+            $("#searchCategoryBox").val("");
+            var Types_ = "html5,flash";
+            var splittedTypes_ = Types_.split(",");
+
+            $.each(splittedTypes_, function (index, value) {
+                $("#checkbox-" + value).prop('checked', true);
+            });
+            getSearchedCategory(0);
+            getSearchedCompany(0);
+
+            if ($("#searchBox").val().length > 0) {
+                ChangeItemClass("search-button", "fa fa-times");
+            }
+            if ($("#searchCategoryBox").val().length > 0) {
+                ChangeItemClass("search-category-button", "fa fa-times");
+            }
+            if ($("#searchCompanyBox").val().length > 0) {
+                ChangeItemClass("search-company-button", "fa fa-times");
+            }
+        });
+
+        $("#searchCategoryBox").keyup(function () {
+            getSearchedCategory(0);
+
+            if ($("#searchCategoryBox").val() == "" || $("#search-category-button").val() == "undefined") {
+                ChangeItemClass("search-category-button", "fa fa-search");
+            }
+            else {
+                ChangeItemClass("search-category-button", "fa fa-times");
+            }
+        });
+        $("#searchCompanyBox").keyup(function () {
+            getSearchedCompany(0);
+            if ($("#searchCompanyBox").val() == "" || $("#search-category-button").val() == "undefined") {
+                ChangeItemClass("search-company-button", "fa fa-search");
+            }
+            else {
+                ChangeItemClass("search-company-button", "fa fa-times");
+            }
+        });
+        $("#searchBox").keyup(function (e) {
+            if (e.keyCode == 13) {
+                window.location.href = ReturnUrl(0, 0);
+            }
+            else {
+                if ($("#searchBox").val() == "" || $("#searchBox").val() == "undefined") {
+                    ChangeItemClass("search-button", "fa fa-search");
+                }
+                else {
+                    ChangeItemClass("search-button", "fa fa-times");
+                }
+            }
+        });
+    });
+</script>
+
+            <footer style="visibility: visible;">
+                <div class="wrapper">
+                    <article>
+                        <div class="footer-left">
+                            <img src="/assets/logo/logo-purpleorange.svg" alt="GDistribution logo">
+                            <p style="color:">
+                                Gamedistribution.com offers a free service for developers and publishers. We help game developers monetize and distribute their games. We offer publishers a wide range of high quality cross platform games.
+                            </p>
+                        </div>
+                        <div class="footer-right">
+                            <div class="info">
+                                <small>Information</small>
+                                <a href="/publishers/" target="_blank" title="">Publishers</a>
+                                <a href="/developers/" target="_blank" title="">Developers</a>
+                                <a href="/games/" target="_blank" title="">Games</a>
+                                <a href="/api/" target="_blank" title="">API</a>
+                                <a href="/controlPanel/" target="_blank" title="">Control Panel</a>
+                            </div>
+                            <div class="contact">
+                                <small>Contact</small>
+                                <a href="mailto:info@gamedistribution.com">info@gamedistribution.com</a>
+                                <p style="color:">
+                                    Beechavenue 182 <br />
+                                    1119 XP Schiphol-Rijk <br />
+                                    The Netherlands
+                                </p>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/company-beta/18096952/" target="_blank" title="" class="button linkedin"></a>
+                            <a href="https://www.facebook.com/Gamedistributioncom-313947892359106/" target="_blank" title="" class="button facebook"></a>
+                            <a href="https://twitter.com/distributegames " target="_blank" title="" class="button twitter"></a>
+                            <a href="#" target="_blank" title="" class="button google not-active"></a>
+                        </div>
+                        <div class="copyright">
+                            <p>
+                                Gamedistribution Copyright 2017 - <a href="/privacypolicy" target="_blank" title="">Privacy Policy</a> -
+                                <a href="/termofuse" target="_blank" title="">Term Of Use</a>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </footer>
+
+
+    <!--JQuery-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/dist/scripts/main.min.js"></script>
+
+    
+
+    <div id="dialog-add-game" title="Add new game">
+        <form id="frmAddNewGame">
+            <fieldset style="overflow:hidden">
+                <label for="addGameTitle">What is your game title?</label>
+                <input type="text" name="AddGameTitle" id="addGameTitle" required>
+            </fieldset>
+        </form>
+    </div>
+    <div id="dialog-add-domain" title="Add new domain">
+        <form id="frmAddNewDomain">
+            <fieldset style="overflow:hidden">
+                <label for="addDomainTitle">What is your domain?</label>
+                <input type="text" name="AddDomainTitle" id="addDomainTitle" required>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="dialog-success" title="Success">
+        <form>
+            <fieldset style="overflow:hidden">
+                <p id="dlgSuccess">Successfuly added to GD</p>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#frmAddNewGame').on('keyup keypress', function (e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+
+            var dlgSuccess = $("#dialog-success").dialog({
+                draggable: false,
+                autoOpen: false,
+                height: 300,
+                width: 700,
+                modal: true,
+                buttons: {
+                    Ok: function () {
+                        dlgSuccess.dialog("close");
+                    }
+
+                },
+                close: function () {
+                    //window.location.href = "/ControlPanel";
+                }
+            });
+            //game old
+            var dlgAddGame = $("#dialog-add-game").dialog({
+                draggable: false,
+                autoOpen: false,
+                height: 300,
+                width: 700,
+                modal: true,
+                buttons: {
+                    Cancel: function () {
+                        dlgAddGame.dialog("close");
+                    },
+                    Ok: function () {
+                        $.ajax({
+                            url: "/ControlPanel/Game/AddNewGame",
+                            method: "post",
+                            data: {
+                                "gameTitle": $("#addGameTitle").val()
+                            },
+                            success: function () {
+                                dlgAddGame.dialog("close");
+                                dlgSuccess.dialog("open");
+                            }
+                        });
+                    }
+
+                },
+                close: function () {
+                    $("#addGameTitle").val("");
+                }
+            });
+     
+
+            //$(".btnAddNewGameClass").click(function () {
+            //    dlgAddGame.dialog("open");
+            //});
+
+            //domain
+            var dlgAddDomain = $("#dialog-add-domain").dialog({
+                draggable: false,
+                autoOpen: false,
+                height: 300,
+                width: 700,
+                modal: true,
+                buttons: {
+                    Cancel: function () {
+                        dlgAddDomain.dialog("close");
+                    },
+                    Ok: function () {
+                        $.ajax({
+                            url: "/Login/AddDomains",
+                            method: "post",
+                            data: {
+                                "domainTitle": $("#addDomainTitle").val()
+                            },
+                            success: function () {
+                                dlgAddDomain.dialog("close");
+                                //dlgSuccess.dialog("open");
+                                window.location.href = "/Login/PublishersDomain";
+                            }
+                        });
+                    }
+
+                },
+                close: function () {
+                    $("#addDomainTitle").val("");
+                }
+            });
+
+            $(".addMyDomain").click(function () {
+                dlgAddDomain.dialog("open");
+            });
+
+        });
+
+    </script>
+    
+</body>
+
+</html>

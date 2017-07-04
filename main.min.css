@@ -4105,7 +4105,6 @@ font-family: 'Poppins', sans-serif;
 }
 @media (min-width: 640px) {
     .homepage nav .logo img {
-        content: url(http://www.gamedistribution.com/assets/logo/logo-whiteorange.svg)
     }
 }
 .homepage nav .burger {
@@ -4904,7 +4903,7 @@ body.homepage section.choose-container .column:first-of-type a:active {
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:first-of-type:after {
         background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498828494/Untitled-1_t23xxc.png');
-        opacity: .4;
+        opacity: .25;
     }
 }
 @media (min-width: 1366px) {
@@ -4945,7 +4944,7 @@ body.homepage section.choose-container .column:last-of-type a:active {
 @media (min-width: 1024px) {
     body.homepage section.choose-container .column:last-of-type:after {
         background-image: url('http://res.cloudinary.com/dqle7rqpy/image/upload/v1498829970/Untitled-2_ufuoql.png');
-opacity: .4;
+opacity: .25;
 
     }
 }
@@ -5398,7 +5397,7 @@ body.publisherspage section.intro-container {
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
     background-attachment: initial;
-    opacity: .4;
+    opacity: .25;
     background-origin: initial;
     background-clip: initial;
      }
