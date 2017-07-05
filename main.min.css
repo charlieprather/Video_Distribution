@@ -6455,3 +6455,28 @@ padding:0px;
   margin:0 auto;
   }
 }
+
+
+
+@media screen and (max-width: 650px) {
+  .logo2 {
+    visibility: hidden;
+    clear: both;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+.mobile-hide {
+    display: none !important;
+ }
+ .mobile-show {
+    display: block !important;
+ }
+}
+.mobile-hide {
+    display: block;
+ }
+ .mobile-show {
+    display: none;
+ }
