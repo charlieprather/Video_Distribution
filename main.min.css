@@ -61,6 +61,8 @@ template {
     display: none
 }
 a {
+        color: black;
+    text-decoration: none;
     background-color: transparent
 }
 a:active,
@@ -3055,7 +3057,7 @@ section article button {
     cursor: pointer;
 font-family: 'Poppins', sans-serif;
     font-size: .778em;
-    background-color: #5c3997;
+    background-color: black;
     transition: all .2s cubic-bezier(.25, .75, .5, 1.25)
 }
 @media (min-width: 640px) {
@@ -4192,7 +4194,7 @@ font-family: 'Poppins', sans-serif;
     color: #fff
 }
 footer {
-    background: #fff
+    background: black;
 }
 footer article {
     font-size: 16px;
@@ -4277,12 +4279,11 @@ footer .footer-right small {
     display: inline;
     width: 100%;
     padding: .15em .1em .2em;
-    color: #512e85;
+    color: white;
     font-size: 1.75em;
     text-transform: uppercase;
     text-" ";: 0 .07em 0 #b3b3b3;
-    border-top: 1px solid #fff;
-    : 1px solid #fff
+    border-top: 1px solid white;
 }
 @media (min-width: 1366px) {
     footer .footer-right small {
@@ -4292,7 +4293,7 @@ footer .footer-right small {
 }
 footer .footer-right a {
     display: block;
-    color: #999;
+    color: white;
     text-decoration: none
 }
 footer .footer-right a:hover {
@@ -4352,7 +4353,7 @@ footer .footer-right .contact small {
 }
 footer .footer-right .contact a {
     display: block;
-    color: #ff8c1c;
+    color: white;
     text-decoration: none
 }
 @media (min-width: 1366px) {
@@ -4378,6 +4379,7 @@ footer .footer-right .contact a:active {
 }
 footer .footer-right .contact p {
     padding: 0
+        color: white;
 }
 footer .social-media {
     position: relative;
@@ -4426,8 +4428,8 @@ footer .copyright {
     }
 }
 footer .copyright a {
-    color: #999;
-    text-decoration: none
+    color: white;
+        text-decoration: none
 }
 footer .copyright a:hover {
     text-decoration: underline
@@ -4518,7 +4520,7 @@ section.catalog-container .menu h2,
 section.catalog-container .menu header small {
     width: 100%;
     margin: .833em 0 1.111em;
-    color: #44a5ab;
+    color: white;
     font-size: 1.556em;
     font-family: 'Poppins', sans-serif;
 
@@ -5671,16 +5673,13 @@ body.gamespage .tiles {
 body.gamepage h1,
 body.gamepage header small,
 header body.gamepage small {
-    color: #44a5ab;
+    color: white;
     border-top-color: #44a5ab;
-    -color: #44a5ab;
     text-" ";: 0 .07em 0 #d0d0d0
 }
 body.gamepage h2 {
-    color: #44a5ab;
-    text-" ";: 0 .07em 0 #d0d0d0;
-    border-top-color: #512e85;
-    -color: #512e85
+    color: white;
+   
 }
 @media (min-width: 640px) {
     body.gamepage h2 {
@@ -5806,6 +5805,7 @@ body.gamepage p {
     body.gamepage .icons,
     body.gamepage .screenshots,
     body.gamepage p {
+            color: white;
         margin: 1.136em auto 2.727em
     }
 }
@@ -5853,7 +5853,8 @@ body.gamepage .clipboard button {
 }
 @media (min-width: 640px) {
     body.gamepage .clipboard button {
-        font-size: .636em
+        font-size: .636em;
+            height: 66px;
     }
 }
 body.gamepage .game {
