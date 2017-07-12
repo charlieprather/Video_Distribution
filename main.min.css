@@ -3605,8 +3605,7 @@ font-family: 'Poppins', sans-serif;
     margin-right: -10px;
     content: "";
     display: inline;
-    content: "";
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-variant: normal;
     text-transform: none
@@ -3632,7 +3631,7 @@ font-family: 'Poppins', sans-serif;
 }
 .dropdown input:checked~label:before {
     display: inline;
-    content: "";
+ 
 font-family: 'Poppins', sans-serif;
     font-style: normal;
     text-decoration: none;
@@ -4591,7 +4590,7 @@ section.catalog-container .menu .dropdown a,
 section.catalog-container .menu .dropdown label {
     height: 40px;
     line-height: 40px;
-    color: #512e85;
+    color: #2581ba;
 font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     background-color: #d0d0d0;
@@ -4599,12 +4598,12 @@ font-family: 'Poppins', sans-serif;
 }
 section.catalog-container .menu .dropdown a:hover,
 section.catalog-container .menu .dropdown label:hover {
-    background-color: #ff8c1c;
+    background-color: #2581ba;
     color: #fff
 }
 section.catalog-container .menu .dropdown a:active,
 section.catalog-container .menu .dropdown label:active {
-    background-color: #ffa64f
+    background-color: #2581ba
 }
 section.catalog-container .menu .dropdown label {
     padding: 0 35px 0 15px;
@@ -4620,11 +4619,11 @@ section.catalog-container .menu .dropdown label:before {
 }
 section.catalog-container .menu .dropdown a.active,
 section.catalog-container .menu .dropdown a:hover {
-    background-color: #ff8c1c;
+    background-color: #2581ba;
     color: #fff
 }
 section.catalog-container .menu .dropdown a:active {
-    background-color: #ffa64f
+    background-color: #2581ba
 }
 section.catalog-container .menu .dropdown input:checked~label {
     background-color: #999
@@ -6036,7 +6035,6 @@ body.loginpage section form input:last-of-type {
 }
 body.loginpage section form legend {
     color: black;
-    border-top-color: black
 }
 body.loginpage section form button[type=submit] {
     width: 100%;
@@ -6410,6 +6408,15 @@ border-top:0px;
 border-bottom:0px;
 }
 
+.row2{
+width:100%;
+border:solid 3px transparent;
+background-color:transparent;
+margin: 0 auto;
+border-top:0px;
+border-bottom:0px;
+}
+
 .top-row{
 border-top:solid 3px transparent;
 }
@@ -6484,6 +6491,19 @@ padding:0px;
   }
 }
 
+@media screen and (max-width:600px) { 
+  .hp-co2, .hp-col-2, .hp-col-2{
+  float:none;
+  width:100%;
+  }
+  .hp-col-1{
+  text-align:center;
+  }
+  .hp-col-1 img{
+  margin:0 auto;
+  }
+}
+
 
 
 @media screen and (max-width: 650px) {
@@ -6527,7 +6547,6 @@ padding:0px;
  }
 
  .left-half {
-    margin-top: 10%;
   margin-left:2%;
   position:static;
   flex: .2;
@@ -6537,7 +6556,7 @@ padding:0px;
 
 
 
-@media screen and (max-width: 650px) {
+@media  (max-width: 650px) {
 .left-half {
     visibility: hidden;
     clear: both;
@@ -6559,3 +6578,70 @@ padding:0px;
 
 
 
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+.float-right{
+  float: right;
+}
+.fa{
+ font-size: .8em;
+  line-height: 22px !important;
+}
+.dropdown{
+   display: inline-block;
+   margin: 20px 50px; 
+}
+.dropdown label, dropdown ul li{
+  display: block;
+  width: 200px;
+  background: #ECF0F1;
+  padding: 15px 20px;
+}
+.dropdown label:hover, dropdown ul li:hover{
+  background: #1ABC9C;
+  color: white;
+  cursor: pointer;
+}
+.dropdown label{
+  position: relative;
+  z-index: 2;
+}
+.dropdown input{
+  display: none;
+}
+.dropdown input ~ ul{
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  top: -20px;
+  z-index: 1;
+}
+.dropdown input:checked + label{
+  background: #1ABC9C;
+  color: white;
+}
+
+.dropdown input:checked ~ ul{
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+
+.animate{
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;  
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+}

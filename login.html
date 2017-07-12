@@ -8,11 +8,12 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="Video Distribution" name="description">
     <meta name="image">
-    <script src="https://use.fontawesome.com/e30ad0460d.js"></script>
+    <script src="https://use.fontawesome.com/e30ad0460d.js">
+    </script>
     <meta content="Video Distribution" name="keywords">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Video Distribution" name="author">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta content="64828BEEBC2810C55BDC8D557EF12230" name="msvalidate.01">
     <meta content="f06fce1e3726da85348ac7eda579b75f" name="baidu_union_verify">
     <meta property="og:url">
@@ -34,104 +35,93 @@
     <meta content="Video Distribution" name="msapplication-TileImage">
     <meta content="Video Distribution" name="msapplication-config">
     <meta content="#44a5ab" name="theme-color"><!-- Fonts & styles -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet"><!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- jQuery library -->
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="main.min.css" rel="stylesheet"><!-- Data structures -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script><!-- Latest compiled JavaScript -->
 
-<!--Jquery CSS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <link href="main.min.css" rel="stylesheet"><!-- Data structures -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--Jquery CSS-->
 
     <script src="jquery-1.10.2.min.js">
-
-   
+    </script>
     <script>
-           $(document).ready(function () {
-               $('.desktop-navigation .button').click(function () {
-                   $('.desktop-navigation .button').removeClass("active");
-                   $(this).addClass("active");
-               });
-           });
+              $(document).ready(function () {
+                  $('.desktop-navigation .button').click(function () {
+                      $('.desktop-navigation .button').removeClass("active");
+                      $(this).addClass("active");
+                  });
+              });
     </script>
     <style>
-           .hide {
-               display: none;
-           }
+              .hide {
+                  display: none;
+              }
 
-           .not-active {
-               pointer-events: none;
-               cursor: default;
-               background-color: gray;
-               border-bottom-color: black;
-           }
+              .not-active {
+                  pointer-events: none;
+                  cursor: default;
+                  background-color: gray;
+                  border-bottom-color: black;
+              }
     </style>
 </head>
 
-
 <body class="homepage">
-     <nav style="
-    z-index: 200;
-">
-        <div class="wrapper"  >
-            <input class="toggle-burger" id="toggle-burger" type="checkbox">  <label class="burger" style="color:white;" for="toggle-burger"><i class="fa fa-navicon"></i></label>
 
-           <div class="mobile-navigation">
-                <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/publishers.html" target="_self" title="Publishers">Publishers</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/producers.html" target="_self" title="Producers">Producers</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/videos.html" target="_self" title="videos">Videos</a> <a  href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/login.html" target="_self" title="Login" style="text-decoration: none;
-">Login</a>  <a  href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/joinus.html" target="_self" title="Join us">Join us</a>
+
+
+   <div id="video_overlays" style="
+    position: absolute;
+    float:left;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    z-index:30;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+30,1+84 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 84%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,1) 84%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,1) 84%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */"></div>
+
+
+    <nav style=" z-index: 200;">
+        <div class="wrapper">
+            <input class="toggle-burger" id="toggle-burger" type="checkbox"> <label class="burger" for="toggle-burger" style="color:white;"><i class="fa fa-navicon"></i></label>
+
+            <div class="mobile-navigation">
+                <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/publishers.html" target="_self" title="Publishers">Publishers</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/producers.html" target="_self" title="Producers">Producers</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/videos.html" target="_self" title="videos">Videos</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/login.html" style="text-decoration: none;" target="_self" title="Login">Login</a> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/joinus.html" target="_self" title="Join us">Join us</a>
             </div>
+
 
             <div class="mask">
-            </div> <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/index.html" target="_self" title="">
-            <img class ="logo2" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1499162435/logo.white_sxpypu.png" style="
-    width: 200px;
-    margin-top: 20px;
-"> </a>                              
-
-  <img class="mobile-show" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1499244040/logo_no_text_pwi7pv.png" style="
-    margin-top: 0px;
-        width: 50px;
-
-"> 
-
-
+            </div>
+            <a href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/index.html" target="_self" title=""><img class="logo2" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1499162435/logo.white_sxpypu.png" style=" width: 200px; margin-top: 20px;"></a> <img class="mobile-show" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1499244040/logo_no_text_pwi7pv.png" style=" margin-top: 0px; width: 50px;">
 
             <div class="desktop-navigation">
-              <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/publishers.html" target="_self" title="Publishers" style="text-decoration: none;
-">Publishers</a><a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/producers.html" target="_self" title="Producers" style="text-decoration: none;
-">Producers</a>  <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/videos.html" target="_self" title="videos" style=" text-decoration: none;
-">Videos</a>  <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/login.html" target="_self" title="Login" style="text-decoration: none;
-">Login</a>  <a class="button"  href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/joinus.html" target="_self" title="Join us" style="text-decoration: none;
-    
-">Join us</a>
-            </div>
+                <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/publishers.html" style="text-decoration: none;" target="_self" title="Publishers">Publishers</a><a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/producers.html" style="text-decoration: none;" target="_self" title="Producers">Producers</a> <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/videos.html" style=" text-decoration: none;" target="_self" title="videos">Videos</a> <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/login.html" style="text-decoration: none;" target="_self" title="Login">Login</a> <a class="button" href="file:///C:/Users/Charlie/Desktop/video_dist_landingpage(New)/joinus.html" style="text-decoration: none;" target="_self" title="Join us">Join us</a>
             </div>
         </div>
     </nav>
-
-
-
-    </image>
     <style>
-       .tiles {
-           justify-content: flex-start;
-       }
+          .tiles {
+              justify-content: flex-start;
+          }
 
-       .tiles a {
-               min-width: 170px;
-               flex-grow: 1;
-               max-width: 195px;
-               overflow: hidden;
-               width: 19%;
-               padding:4px;
-    margin-left: 22px;        }
+          .tiles a {
+                  min-width: 170px;
+                  flex-grow: 1;
+                  max-width: 195px;
+                  overflow: hidden;
+                  width: 19%;
+                  padding:4px;
+       margin-left: 22px;        }
 
 
-       .tiles a p, .tiles a p:hover, .tiles a:hover p{text-align:left; color:#2C3E50;padding-left:0px;}
+          .tiles a p, .tiles a p:hover, .tiles a:hover p{text-align:left; color:#2C3E50;padding-left:0px;}
 
 
 
@@ -140,72 +130,26 @@
 
     </style>
 
-    <section class="catalog-container" id="catalog" style="
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 300px;
-    margin: auto;
-    z-index: 100;
-">
-        <div class="wrapper" style="
-    width: 280px;
-">
-
-         
-
-<article style="
-    padding: 0;
-">
-             
-
+    <section class="catalog-container" id="catalog" style="padding-top: 0; position: absolute; top: 40%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 300px; margin: auto; z-index: 100;">
+        <div class="wrapper" style=" width: 280px;">
+            <article style=" padding: 0;">
                 <header>
+                    <div class="mobile-show" style="color:white; font-size: 25px;">
+                        <center>
+                            <p>Video Distribution</p>
+                        </center>
+                    </div>
 
 
- <div class="mobile-show" style="color:white; font-size: 25px;
-    
-
-"><center><p>Video Distribution</p> </center></div>
-
-                
-
-              
-<h2 style="
-    font-size: 63px;
-">Login</h2>
-
-
+                    <h2 style=" font-size: 63px;">Login</h2>
                 </header>
 
 
-                
-<form action="/Login/Login" method="post" id="login">
-            <fieldset>
-
-<input type="email" id="username" name="username" autocomplete="on" placeholder="username" required="required" style="
-    margin-bottom: 10px;
-">
-
-<input type="password" id="password" name="password" minlength="6" autocomplete="off" placeholder="password" required="required" style="
-    margin-bottom: 10px;
-">
-                <span></span>
-                <button type="submit" style="
-    min-width: 0;
-    background-color: #0f70b7;
-    width: 100%;
-">Login</button>
-               <label style="
-margin-top: 15px;
-    color: white;
-">Lost your password? Click <a href="/Login/LostPassword" style=" background: none;
-    color: #0f70b7;"> Here</a> to recover.</label>
-             
-            </fieldset>
-        </form>
-
+                <form action="/Login/Login" id="login" method="post" name="login">
+                    <fieldset>
+                        <input autocomplete="on" id="username" name="username" placeholder="username" required="required" style=" margin-bottom: 10px;" type="email"> <input autocomplete="off" id="password" name="password" placeholder="password" required="required" style=" margin-bottom: 10px;" type="password"> <span></span> <button style=" min-width: 0; background-color: #0f70b7; width: 100%;" type="submit">Login</button> <label style=" margin-top: 15px; color: white;">Lost your password? Click <a href="/Login/LostPassword" style=" background: none; color: #0f70b7;">Here</a> to recover.</label>
+                    </fieldset>
+                </form>
             </article>
         </div>
     </section>
@@ -214,64 +158,22 @@ margin-top: 15px;
     <section class="intro-container">
 
 
-   <video id="vjs_video_259_html5_api"  data-setup="{&quot;preload&quot;:&quot;auto&quot;,&quot;controls&quot;:false,&quot;autoplay&quot;:true,&quot;loop&quot;:true,&quot;fluid&quot;:true}" style="    /* margin-left: -650px; */
-    top: 0px;
-    position: fixed;
-    position: fixed;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    /* z-index: -100; */
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* left: 50%; */
-    transform: translate(-50%,0);
-    -webkit-transform: translate(-50%,0);
-    /* width: 100%; */
-    /* bottom: 0; */
-    /* min-height: 670px; */
-    /* min-width: 1200px; */
-    /* top: 0; */
-    /* right: 0 !important; */
-    /* padding-top: 0; */
-    /* min-width: 1600px; */
-    xmin-height: 900px;
-    /* height: auto; */
-    -webkit-transform: translate3d(0, 0, 0);
-    /* z-index: -2; */" loop="" preload="auto" autoplay="">
-      <source src="lights.mp4" type="video/mp4">
-  <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+<div style="background-color: black; z-index: 1000000000">
+        <video autoplay="" data-setup="{&quot;preload&quot;:&quot;auto&quot;,&quot;controls&quot;:false,&quot;autoplay&quot;:true,&quot;loop&quot;:true,&quot;fluid&quot;:true}" id="vjs_video_259_html5_api" loop="" preload="auto" style="top: 0px; position: fixed; position: fixed; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; transform: translate(-50%,0); -webkit-transform: translate(-50%,0); xmin-height: 900px;  -webkit-transform: translate3d(0, 0, 0);"><source src="esoobservatorynightviewofESO36metretelescopemp4.mp4" type="video/mp4">
+
+
 </video>
-    
+
+</div>
 
 
-  
-
-
-</section>
-
-</section>
-
-        
-
-
-  </body>
-
-
-   
-
-
-  
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
+    </section>
     <!--JQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">s
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    s
     </script> 
     <script src="main.min.js" type="text/javascript">
     </script>
-
 </body>
 </html>
